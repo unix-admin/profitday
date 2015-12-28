@@ -43,7 +43,7 @@ AppAsset::register($this);
             ['label' => 'Головна', 'url' => ['/site/index']],
             ['label' => 'Для компаній', 'url' => ['/site/about']],
             ['label' => 'Найближчі заходи', 'url' => ['/site/contact']],
-            ['label' => 'Як це булр', 'url' => ['/site/person']],
+            ['label' => 'Як це було', 'url' => ['/site/person']],
             ['label' => 'Вакансії для початківців', 'url' => ['/site/person']],
         ],
     ]);

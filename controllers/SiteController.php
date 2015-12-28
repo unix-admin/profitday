@@ -48,23 +48,9 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
-    public function actionPersonregistration()
-    {
-        $model = new Person();
+    
 
-        if ($model->load(Yii::$app->request->post())) {
-            if ($model->validate()) {
-                // form inputs are valid, do something here
-                return;
-            }
-        }
-
-        return $this->render('personregistration', [
-            'model' => $model,
-        ]);
-    }
-
-    public function actionCompanyregistration()
+    public function actionCompany()
     {
         $model = new Company();
 
@@ -75,8 +61,25 @@ class SiteController extends Controller
             }
         }
 
-        return $this->render('companyregistration', [
+        return $this->render('company', [
             'model' => $model,
         ]);
     }
+
+    public function actionPerson()
+    {
+        $model = new Person();
+
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->validate()) {
+                // form inputs are valid, do something here
+                return;
+            }
+        }
+
+        return $this->render('person', [
+            'model' => $model,
+        ]);
+    }
+
 }

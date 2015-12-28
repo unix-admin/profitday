@@ -7,7 +7,7 @@ use yii\widgets\ActiveForm;
 /* @var $model app\models\Person */
 /* @var $form ActiveForm */
 ?>
-<div class="person">
+<div class="site-person">
 
     <?php $form = ActiveForm::begin(); ?>
 
@@ -28,4 +28,4 @@ use yii\widgets\ActiveForm;
         </div>
     <?php ActiveForm::end(); ?>
 
-</div><!-- person -->
+</div><!-- site-person -->

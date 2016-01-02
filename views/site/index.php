@@ -1,11 +1,11 @@
 <?php
 
 /* @var $this yii\web\View */
+$this->title = $model->getTitle($type,$status);
 
-$this->title = 'My Yii Application';
 ?>
 <div class="site-index">
-
+    <?= $model->getContent($type,$status)?>
     <div class="jumbotron">
         <h1>Congratulations!</h1>
 

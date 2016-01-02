@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Content;
 use Yii;
 use yii\web\Controller;
 use app\models\ContactForm;
@@ -26,8 +27,13 @@ class SiteController extends Controller
     }
 
     public function actionIndex()
-    {
-        return $this->render('index');
+    {   $model = new Content();
+        return $this->render('index',[
+            'model' => $model,
+            'status' => '1',
+            'type' =>'index',
+
+        ]);
     }
 
     public function actionContact()

@@ -54,7 +54,7 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
-    
+
 
     public function actionCompany()
     {
@@ -75,7 +75,6 @@ class SiteController extends Controller
     public function actionPerson()
     {
         $model = new Person();
-
         if ($model->load(Yii::$app->request->post())) {
             if ($model->validate()) {
                 // form inputs are valid, do something here

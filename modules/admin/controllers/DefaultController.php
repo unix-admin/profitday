@@ -53,8 +53,8 @@ class DefaultController extends Controller
     {
 
         Yii::$app->user->logout();
-        return $this->goBack('admin/default/login');
-        //    return $this->goBack('/admin');
+        //return $this->goBack('admin/default/login');
+            return $this->goBack('/admin');
 
 
     }

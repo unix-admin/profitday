@@ -11,19 +11,20 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-        <?= $form->field($model, 'name') ?>
-        <?= $form->field($model, 'contact_person') ?>
-        <?= $form->field($model, 'order') ?>
-        <?= $form->field($model, 'intro_uk') ?>
-        <?= $form->field($model, 'intro_ru') ?>
-        <?= $form->field($model, 'intro_en') ?>
         <?= $form->field($model, 'facebook_profile') ?>
         <?= $form->field($model, 'google_profile') ?>
         <?= $form->field($model, 'linkedin_profile') ?>
         <?= $form->field($model, 'vk_profile') ?>
-        <?= $form->field($model, 'need_presentation') ?>
-        <?= $form->field($model, 'need_training') ?>
-        <?= $form->field($model, 'pay_agree') ?>
+        <?= $form->field($model, 'name') ?>
+        <?= $form->field($model, 'contact_person') ?>
+        <?= $form->field($model, 'order')->dropDownList(['1'=>'Yes','0'=>'No']) ?>
+        <?= $form->field($model, 'intro_uk') ?>
+        <?= $form->field($model, 'intro_ru') ?>
+        <?= $form->field($model, 'intro_en') ?>
+
+        <?= $form->field($model, 'need_presentation')->dropDownList(['1'=>'Yes','0'=>'No']) ?>
+        <?= $form->field($model, 'need_training')->dropDownList(['1'=>'Yes','0'=>'No']) ?>
+        <?= $form->field($model, 'pay_agree')->dropDownList(['1'=>'Yes','0'=>'No']) ?>
         <?= $form->field($model, 'is_organisator') ?>
         <?= $form->field($model, 'is_sponsor') ?>
         <?= $form->field($model, 'ideas') ?>
@@ -34,7 +35,7 @@ use yii\widgets\ActiveForm;
         <?= $form->field($model, 'logo_url') ?>
     
         <div class="form-group">
-            <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
+            <?= Html::submitButton('Save', ['class' => 'btn btn-primary']) ?>
         </div>
     <?php ActiveForm::end(); ?>
 

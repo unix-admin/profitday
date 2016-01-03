@@ -12,6 +12,25 @@ use app\models\Company;
 class SiteController extends Controller
 {
 
+    public function beforeAction($event)
+    {
+        $session = Yii::$app->session;
+        !$session->isActive ? $session->open() : $session;
+        $cookies = Yii::$app->request->cookies;
+        if (isset($cookies['language'])) {
+            Yii::$app->language = $cookies['language']->value;
+        }
+        else
+        {
+            $cookie = Yii::$app->response->cookies;
+            $cookie->add(new \yii\web\Cookie([
+                'name' => 'language',
+                'value' => Yii::$app->language,
+            ]));
+
+        }
+        return true;
+    }
 
     public function actions()
     {
@@ -62,11 +81,13 @@ class SiteController extends Controller
 
         if ($model->load(Yii::$app->request->post())) {
             if ($model->validate()) {
-                // form inputs are valid, do something here
-                return;
+                $model->is_sponsor = 0;
+                $model->is_organisator = 0;
+                $model->save();
+                Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');
+                return $this->refresh();
             }
         }
-
         return $this->render('company', [
             'model' => $model,
         ]);

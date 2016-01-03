@@ -40,6 +40,11 @@ AppAsset::register($this);
             Yii::$app->user->isGuest ?
                 ['label' => 'Login', 'url' => ['/admin/default/login']] :
                 [
+                    'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+                    'url' => ['/admin/default/logout'],
+                    'linkOptions' => ['data-method' => 'post']
+                ],
+                [
                     'label' => 'Керування користувачами',
                     'url' => ['/admin/admins/index'],
                 ],
@@ -49,7 +54,7 @@ AppAsset::register($this);
                 ],
                 [
                 'label' => 'Керування учасниками та компаніями',
-                'url' => ['/admin/admins/index'],
+                'url' => ['/admin/company/index'],
                 ],
             [
                 'label' => 'Керування подіями',
@@ -59,11 +64,7 @@ AppAsset::register($this);
                 'label' => 'Керування розсилками',
                 'url' => ['/admin/admins/index'],
             ],
-                [
-                    'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-                    'url' => ['/admin/default/logout'],
-                    'linkOptions' => ['data-method' => 'post']
-                ],
+
 
         ],
     ]);

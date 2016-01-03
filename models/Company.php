@@ -46,7 +46,10 @@ class Company extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'contact_person', 'order', 'intro_uk', 'intro_ru', 'intro_en', 'facebook_profile', 'google_profile', 'linkedin_profile', 'vk_profile'], 'required'],
+            [['name', 'contact_person', 'order','need_presentation', 'need_training', 'pay_agree','order','telephone', 'e_mail'], 'required'],
+            [['facebook_profile', 'google_profile', 'linkedin_profile', 'vk_profile'], 'url'],
+            [['e_mail'], 'email'],
+            [['e_mail'], 'unique'],
             [['need_presentation', 'need_training', 'pay_agree', 'is_organisator', 'is_sponsor', 'order'], 'integer'],
             [['ideas'], 'string'],
             [['name', 'contact_person', 'telephone', 'e_mail', 'site', 'skype', 'logo_url', 'intro_uk', 'intro_ru', 'intro_en', 'facebook_profile', 'google_profile', 'linkedin_profile', 'vk_profile'], 'string', 'max' => 255]
@@ -60,7 +63,7 @@ class Company extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'name' => Yii::t('app', 'Name'),
+            'name' => Yii::t('company', 'Name'),
             'need_presentation' => Yii::t('app', 'Need Presentation'),
             'need_training' => Yii::t('app', 'Need Training'),
             'pay_agree' => Yii::t('app', 'Pay Agree'),
@@ -82,14 +85,5 @@ class Company extends \yii\db\ActiveRecord
             'linkedin_profile' => Yii::t('app', 'Linkedin Profile'),
             'vk_profile' => Yii::t('app', 'Vk Profile'),
         ];
-    }
-
-    /**
-     * @inheritdoc
-     * @return CompanyQuery the active query used by this AR class.
-     */
-    public static function find()
-    {
-        return new CompanyQuery(get_called_class());
     }
 }

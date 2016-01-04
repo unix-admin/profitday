@@ -36,8 +36,22 @@ $this->params['breadcrumbs'][] = $this->title;
              'e_mail',
             // 'site',
             // 'skype',
-             'is_organisator',
-             'is_sponsor',
+            [
+                'attribute'=>'is_organisator',
+                //'label'=>'is_organisator',
+                'filter'=>array("0"=>Yii::t('yii','No'),"1"=>Yii::t('yii','Yes')),
+                'content'=>function($data){
+                    return $data->is_organisator ? Yii::t('yii','Yes'): Yii::t('yii', 'No') ;
+                }
+            ],
+            [
+                'attribute'=>'is_sponsor',
+                //'label'=>'is_sponsor',
+                'filter'=>array("0"=>Yii::t('yii','No'),"1"=>Yii::t('yii','Yes')),
+                'content'=>function($data){
+                    return $data->is_sponsor ? Yii::t('yii','Yes'): Yii::t('yii', 'No') ;
+                },
+            ],
             // 'order',
             // 'logo_url:url',
             // 'intro_uk',
@@ -49,6 +63,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'vk_profile',
 
             ['class' => 'yii\grid\ActionColumn'],
+
         ],
     ]); ?>
 

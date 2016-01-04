@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-
+use yii\helpers\ArrayHelper;
 /* @var $this yii\web\View */
 /* @var $model app\models\Company */
 
@@ -15,8 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a(Yii::t('yii','Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a(Yii::t('yii','Delete'), ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -30,17 +30,37 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'name',
-            'need_presentation',
-            'need_training',
-            'pay_agree',
+            [
+              'label' => 'need_presentation',
+              'format' => 'html',
+              'value' => $model->need_presentation ? Yii::t('yii','Yes') : Yii::t('yii','No'),
+            ],
+            [
+                'label' => 'need_training',
+                'format' => 'html',
+                'value' => $model->need_training ? Yii::t('yii','Yes') : Yii::t('yii','No'),
+            ],
+            [
+                'label' => 'pay_agree',
+                'format' => 'html',
+                'value' => $model->pay_agree ? Yii::t('yii','Yes') : Yii::t('yii','No'),
+            ],
             'ideas:ntext',
             'contact_person',
             'telephone',
             'e_mail',
             'site',
             'skype',
-            'is_organisator',
-            'is_sponsor',
+            [
+                'label' => Yii::t('company','Is Organisator'),
+                'format' => 'html',
+                'value' => $model->is_organisator ? Yii::t('yii','Yes') : Yii::t('yii','No'),
+            ],
+            [
+                'label' => Yii::t('company','Is Sponsor'),
+                'format' => 'html',
+                'value' => $model->is_sponsor ? Yii::t('yii','Yes') : Yii::t('yii','No'),
+            ],
             'order',
             'logo_url:url',
             'intro_uk',

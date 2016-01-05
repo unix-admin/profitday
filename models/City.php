@@ -48,13 +48,4 @@ class City extends \yii\db\ActiveRecord
             'have_event' => Yii::t('app', 'Have Event'),
         ];
     }
-
-    /**
-     * @inheritdoc
-     * @return CityQuery the active query used by this AR class.
-     */
-    public static function find()
-    {
-        return new CityQuery(get_called_class());
-    }
 }

@@ -1,7 +1,7 @@
 <?php
 
 namespace app\models;
-
+use yii\db\ActiveRecord;
 use Yii;
 
 /**
@@ -20,7 +20,7 @@ use Yii;
  * @property string $type
  * @property integer $status
  */
-class Content extends \yii\db\ActiveRecord
+class Content extends ActiveRecord
 {
     /**
      * @inheritdoc
@@ -36,7 +36,8 @@ class Content extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title_uk', 'title_ru', 'title_en', 'content_uk', 'content_ru', 'content_en', 'tags_uk', 'tags_ru', 'tags_en', 'type', 'status'], 'required'],
+
+            [['title_uk', 'title_ru', 'title_en', 'content_uk', 'content_ru', 'content_en', 'tags_uk', 'tags_ru', 'tags_en', 'type', 'status'], 'default'],
             [['content_uk', 'content_ru', 'content_en'], 'string'],
             [['status'], 'integer'],
             [['title_uk', 'title_ru', 'title_en', 'tags_uk', 'tags_ru', 'tags_en', 'type'], 'string', 'max' => 255]
@@ -78,4 +79,5 @@ class Content extends \yii\db\ActiveRecord
         $contentField = 'content_'.Yii::$app->language;
         return $content->{$contentField};
     }
+
 }

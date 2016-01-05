@@ -8,6 +8,7 @@ use yii\web\Controller;
 use app\models\ContactForm;
 use app\models\Person;
 use app\models\Company;
+use app\models\City;
 
 class SiteController extends Controller
 {
@@ -104,6 +105,21 @@ class SiteController extends Controller
         }
 
         return $this->render('person', [
+            'model' => $model,
+        ]);
+    }
+    public function actionCity()
+    {
+        $model = new City();
+
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->validate()) {
+                // form inputs are valid, do something here
+                return;
+            }
+        }
+
+        return $this->render('city', [
             'model' => $model,
         ]);
     }

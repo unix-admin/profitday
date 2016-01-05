@@ -27,15 +27,14 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'Адмінка',
-        'brandUrl' => '/admin',
+
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar-inverse navbar-top',
             //'class' => 'navbar-nav navbar-left',
         ],
      ]);
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-left'],
+        'options' => ['class' => 'navbar-nav navbar-top'],
         'items' => [
             Yii::$app->user->isGuest ?
                 ['label' => 'Login', 'url' => ['/admin/default/login']] :

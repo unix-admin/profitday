@@ -53,13 +53,4 @@ class Events extends \yii\db\ActiveRecord
             'address' => Yii::t('app', 'Address'),
         ];
     }
-
-    /**
-     * @inheritdoc
-     * @return EventsQuery the active query used by this AR class.
-     */
-    public static function find()
-    {
-        return new EventsQuery(get_called_class());
-    }
 }

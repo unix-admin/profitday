@@ -12,6 +12,14 @@ $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-contact">
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#contactform-items').multiselect({
+                placeholder: <?= '\''.Yii::t('yii','Update').'\'' ?>
+
+            });
+        });
+    </script>
     <h1><?= Html::encode($this->title) ?></h1>
 
     <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
@@ -47,9 +55,17 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <?= $form->field($model, 'email') ?>
 
-                    <?= $form->field($model, 'subject') ?>
 
-                    <?= $form->field($model, 'body')->textArea(['rows' => 6]) ?>
+                <?= $form->field($model, 'items[]')->listBox([
+                '1'=>Yii::t('frontend','MONDAY'),
+                '2'=>Yii::t('frontend','TUESDAY'),
+                '3'=>Yii::t('frontend','WEDNESDAY'),
+                '4'=>Yii::t('frontend','THURSDAY'),
+                '5'=>Yii::t('frontend','FRIDAY'),
+                '6'=>Yii::t('frontend','SATURDAY'),
+                '7'=>Yii::t('frontend','SUNDAY'),
+                ],['multiple' => 'multiple']); ?>
+                <?= $form->field($model, 'body')->textArea(['rows' => 6]) ?>
 
                     <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
                         'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
@@ -60,9 +76,9 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
 
                 <?php ActiveForm::end(); ?>
-
             </div>
         </div>
 
     <?php endif; ?>
+
 </div>

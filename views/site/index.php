@@ -6,48 +6,31 @@ $this->title = $model->getTitle($type,$status);
 ?>
 <div class="site-index">
     <?= $model->getContent($type,$status)?>
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="index.php?r=site%2Fpersonregistration">Зареєструватись</a></p>
+</div>
+<div class="row">
+    <div class="col-md-12" style="text-align: center">
+        <!--<div class="col-md-8 col-md-offset-5">-->
+        <button id="regBut" class="regBut text-uppercase">реєструйтесь</button>
+        <!--                <button class="btn btn-block" id="regBut">реєструйтесь</button>-->
+        <!--</div>-->
     </div>
-
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
-        </div>
-
+</div>
+<div class="row">
+    <!--<div class="col-md-12">-->
+    <div class="col-md-8 col-md-offset-2">
+        <span class="index-text">Реєструйтесь через соцмережi:</span>
+        <!--            </div>-->
+        <!--            <div class="col-md-3">-->
+        <a href="#"><img src="<?= Yii::$app->request->baseUrl ?>/image/twt.png"></a>
+        <a href="#"><img src="<?= Yii::$app->request->baseUrl ?>/image/vk.png"></a>
+        <a href="#"><img src="<?= Yii::$app->request->baseUrl ?>/image/g+.png"></a>
+        <a href="#"><img src="<?= Yii::$app->request->baseUrl ?>/image/fsbk.png"></a>
+        <a href="#"><img src="<?= Yii::$app->request->baseUrl ?>/image/in.png"></a>
     </div>
+    <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-1 col-sm-1 col-xs-1 orange-line"></div>
+        <hr class="col-md-10" style="margin-top: 2px;">
+    </div>
+    <!--</div>-->
 </div>

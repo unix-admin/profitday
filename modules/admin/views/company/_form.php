@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use mihaildev\elfinder\InputFile;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Company */
@@ -38,7 +39,16 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'order')->textInput() ?>
 
-    <?= $form->field($model, 'logo_url')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'logo_url')->widget(InputFile::className(), [
+        'language'      => 'ru',
+        'controller'    => 'elfinder',
+        'path' => 'logo',
+        'filter'        => 'image',
+        'template'      => '<div class="input-group">{input}<span class="input-group-btn">{button}</span></div>',
+        'options'       => ['class' => 'form-control'],
+        'buttonOptions' => ['class' => 'btn btn-default'],
+        'multiple'      => false
+    ]); ?>
 
     <?= $form->field($model, 'intro_uk')->textInput(['maxlength' => true]) ?>
 

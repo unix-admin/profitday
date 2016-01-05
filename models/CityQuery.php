@@ -3,7 +3,7 @@
 namespace app\models;
 
 /**
- * This is the ActiveQuery class for [[City]].
+ * This is the ActiveQuery class for [[city]].
  *
  * @see City
  */

@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use \yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "events".
@@ -15,7 +16,7 @@ use Yii;
  * @property string $title_en
  * @property string $address
  */
-class Events extends \yii\db\ActiveRecord
+class Events extends ActiveRecord
 {
     /**
      * @inheritdoc
@@ -45,7 +46,7 @@ class Events extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'city_id' => Yii::t('app', 'City ID'),
+            'city_id' => Yii::t('app', 'city ID'),
             'event_date' => Yii::t('app', 'Event Date'),
             'title_uk' => Yii::t('app', 'Title Uk'),
             'title_ru' => Yii::t('app', 'Title Ru'),

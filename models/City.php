@@ -1,8 +1,10 @@
 <?php
 
 namespace app\models;
-
+use yii\db\ActiveRecord;
 use Yii;
+
+
 
 /**
  * This is the model class for table "city".
@@ -13,7 +15,7 @@ use Yii;
  * @property string $title_en
  * @property integer $have_event
  */
-class City extends \yii\db\ActiveRecord
+class City extends ActiveRecord
 {
     /**
      * @inheritdoc

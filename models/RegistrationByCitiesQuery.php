@@ -1,13 +1,13 @@
 <?php
 
 namespace app\models;
-
+use \yii\db\ActiveQuery;
 /**
  * This is the ActiveQuery class for [[RegistrationByCities]].
  *
  * @see RegistrationByCities
  */
-class RegistrationByCitiesQuery extends \yii\db\ActiveQuery
+class RegistrationByCitiesQuery extends ActiveQuery
 {
     /*public function active()
     {

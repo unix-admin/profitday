@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use \yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "registration_by_cities".
@@ -11,7 +12,7 @@ use Yii;
  * @property integer $registration_id
  * @property integer $registration_type
  */
-class RegistrationByCities extends \yii\db\ActiveRecord
+class RegistrationByCities extends ActiveRecord
 {
     /**
      * @inheritdoc
@@ -38,7 +39,7 @@ class RegistrationByCities extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'city_id' => Yii::t('app', 'City ID'),
+            'city_id' => Yii::t('app', 'city ID'),
             'registration_id' => Yii::t('app', 'Registration ID'),
             'registration_type' => Yii::t('app', 'Registration Type'),
         ];

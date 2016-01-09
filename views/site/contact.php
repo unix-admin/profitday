@@ -55,16 +55,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <?= $form->field($model, 'email') ?>
 
-
-                <?= $form->field($model, 'items[]')->listBox([
-                '1'=>Yii::t('frontend','MONDAY'),
-                '2'=>Yii::t('frontend','TUESDAY'),
-                '3'=>Yii::t('frontend','WEDNESDAY'),
-                '4'=>Yii::t('frontend','THURSDAY'),
-                '5'=>Yii::t('frontend','FRIDAY'),
-                '6'=>Yii::t('frontend','SATURDAY'),
-                '7'=>Yii::t('frontend','SUNDAY'),
-                ],['multiple' => 'multiple']); ?>
+                <?= $form->field($model, 'items[]')->listBox(\yii\helpers\ArrayHelper::map(\app\models\City::find()->asArray()->all(),'id','title_'.Yii::$app->language)
+                    ,['multiple' => 'multiple']); ?>
                 <?= $form->field($model, 'body')->textArea(['rows' => 6]) ?>
 
                     <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [

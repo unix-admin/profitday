@@ -24,7 +24,20 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) ?>
     </p>
+    <?php
+    $tst = $model->registrations($model->id)->all();
+    $data = ArrayHelper::toArray($tst, [
+        'app\models\City' => [
+            'title_uk',
+        ],
+    ]);
+    $city = '';
+    foreach ($data as $value)
+    {
+        $city = $city.' '.$value['title_uk'];
+    }
 
+    ?>
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
@@ -70,7 +83,17 @@ $this->params['breadcrumbs'][] = $this->title;
             'google_profile',
             'linkedin_profile',
             'vk_profile',
+            [
+                'label' => Yii::t('company','cities'),
+                'format' => 'html',
+                'value' => $city,
+            ],
         ],
-    ]) ?>
+
+    ]);
+
+
+
+    ?>
 
 </div>

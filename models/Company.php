@@ -3,6 +3,8 @@
 namespace app\models;
 
 use Yii;
+use yii\base\Model;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "company".
@@ -32,6 +34,7 @@ use Yii;
  */
 class Company extends \yii\db\ActiveRecord
 {
+    public $cities =[];
     /**
      * @inheritdoc
      */
@@ -46,9 +49,10 @@ class Company extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'contact_person', 'order','need_presentation', 'need_training', 'pay_agree','order','telephone', 'e_mail'], 'required'],
+            [['name', 'contact_person', 'order','need_presentation', 'need_training', 'pay_agree','order','telephone', 'e_mail','cities'], 'required'],
             [['facebook_profile', 'google_profile', 'linkedin_profile', 'vk_profile'], 'url'],
             [['e_mail'], 'email'],
+            [['e_mail'], 'trim'],
             [['e_mail'], 'unique'],
             [['need_presentation', 'need_training', 'pay_agree', 'is_organisator', 'is_sponsor', 'order'], 'integer'],
             [['ideas'], 'string'],
@@ -84,6 +88,35 @@ class Company extends \yii\db\ActiveRecord
             'google_profile' => Yii::t('app', 'Google Profile'),
             'linkedin_profile' => Yii::t('app', 'Linkedin Profile'),
             'vk_profile' => Yii::t('app', 'Vk Profile'),
+            'cities' => Yii::t('app', 'cities'),
         ];
     }
+    public function afterSave($insert, $changedAttributes){
+        parent::afterSave($insert, $changedAttributes);
+        foreach ($this->cities as $id)
+        {
+            $registration = new RegistrationByCities();
+            $registration->city_id = $id;
+            $registration->registration_id = $this->id;
+            $registration->registration_type=1;
+            $registration->save();
+        }
+
+    }
+
+    public function getCities()
+    {
+        return $this->hasMany(City::className(), ['id' => 'city_id'])
+            ->viaTable('registration_by_cities', ['registration_id' => 'id']);
+       // return $this->hasMany(RegistrationByCities::className(), ['registration_id' => 'id']);
+    }
+
+    public function registrations($id)
+    {
+      $regid = Company::findone($id);
+        return $regid->getCities();
+
+    }
+
+
 }

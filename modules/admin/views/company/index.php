@@ -61,7 +61,26 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'google_profile',
             // 'linkedin_profile',
             // 'vk_profile',
+            [
+                'attribute'=>'cities',
+                //'label'=>'is_sponsor',
+                //'filter'=>array("0"=>Yii::t('yii','No'),"1"=>Yii::t('yii','Yes')),
+                'content'=>function($data){
+                    $tst = $data->registrations($data->id)->all();
+                    $data1 = \yii\helpers\ArrayHelper::toArray($tst, [
+                        'app\models\City' => [
+                            'title_uk',
+                        ],
+                    ]);
+                    $city = '';
+                    foreach ($data1 as $value)
+                    {
+                        $city = $city.' '.$value['title_uk'];
+                    }
 
+                    return $city;
+                },
+            ],
             ['class' => 'yii\grid\ActionColumn'],
 
         ],

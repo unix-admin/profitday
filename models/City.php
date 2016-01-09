@@ -48,4 +48,12 @@ class City extends \yii\db\ActiveRecord
             'have_event' => Yii::t('app', 'Have Event'),
         ];
     }
+
+    public static function getTitle()
+    {
+
+        $title =  self::findAll();
+        //$titleField = 'title_'.Yii::$app->language;
+        return $title;
+    }
 }

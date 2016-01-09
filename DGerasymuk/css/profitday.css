@@ -205,6 +205,9 @@
     line-height: 16px;
     /*text-align: center;*/
 }
+.docNavi {
+    display: inline-block;
+}
 .docNavi > li > a {
     /*font-family: 'Myriad Pro';*/
     color: #555555 !important;

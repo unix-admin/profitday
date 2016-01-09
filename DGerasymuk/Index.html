@@ -330,84 +330,139 @@
                 <div class="row">
                     <div class="col-md-offset-2 col-md-8">
                         <p class="subPeople">Посилання на профілі в соціальних мережах</p>
-                        <form class="index-text">
-                            <div class="input-group">Facebook</div>
-                            <div class="input-group"><label><input name="Facebook" type="text" value="" class="socialLink"></label></div>
-                            <div class="input-group">Google+</div>
-                            <div class="input-group"><label><input name="Google+" type="text" value="" class="socialLink"></label></div>
-                            <div class="input-group">LinkedIn</div>
-                            <div class="input-group"><label><input name="LinkedIn" type="text" value="" class="socialLink"></label></div>
-                            <div class="input-group">VK</div>
-                            <div class="input-group"><label><input name="VK" type="text" value="" class="socialLink"></label></div>
-                            <div class="input-group">Twitter</div>
-                            <div class="input-group"><label><input name="Twitter" type="text" value="" class="socialLink"></label></div>
+                        <form role="form">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <label for="facebook" class="index-text">Facebook</label>
+                                        <input id="facebook" type="text" value="" class="form-control input-sm">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <label for="google+" class="index-text">Google+</label>
+                                        <input id="google+" type="text" value="" class="form-control input-sm">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <label for="linkedIn" class="index-text">LinkedIn</label>
+                                        <input id="linkedIn" type="text" value="" class="form-control input-sm">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <label for="vk" class="index-text">VK</label>
+                                        <input id="vk" type="text" value="" class="form-control input-sm">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <label for="twitter" class="index-text">Twitter</label>
+                                        <input id="twitter" type="text" value="" class="form-control input-sm">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <p class="subPeople">Name*</p>
+                                        <label for="name" class="index-text">Ваше ім'я та прізвище</label>
+                                        <input id="name" type="text" value="" class="form-control input-sm">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <p class="subPeople">Do you wish to take part in special seminar or training for visitors?</p>
+                                <p class="index-text">Чи маєте бажання відвідати тематичні виступи, семінари чи тренінги?</p>
+                                <div class="checkbox"><label class="index-text"><input name="exp" type="checkbox" value="1">"Як пройти співбесіду в ІТ компанію?"</label></div>
+                                <div class="checkbox"><label class="index-text"><input name="exp" type="checkbox" value="2">"English for IT"</label></div>
+                                <div class="checkbox"><label class="index-text"><input name="exp" type="checkbox" value="3">"Online ІТ освіта - можливості та перспективи в Україні"</label></div>
+                                <div class="checkbox"><label class="index-text"><input name="exp" type="checkbox" value="4">"Краш-тест резюме, або 15 кроків до ідеального резюме"</label></div>
+                                <div class="checkbox"><label class="index-text"><input name="exp" type="checkbox" value="5">«Стратегія пошуку роботи»</label></div>
+                                <div class="checkbox"><label class="index-text"><input name="exp" type="checkbox" value="6">"Коворкінги, як перспективний метод організації роботи та навчання програмістів"</label></div>
+                                <div class="checkbox"><label class="index-text"><input name="exp" type="checkbox" value="7">"Таємниці UI дизайну..."</label></div>
+                                <div class="checkbox"><label class="index-text"><input name="exp" type="checkbox" value="8">"Як я став ПРОГРАМІСТОМ?"</label></div>
+                                <div class="checkbox"><label class="index-text"><input name="exp" type="checkbox" value="9">"Як стати програмістом за рік?"</label></div>
+                                <div class="checkbox"><label class="index-text"><input name="exp" type="checkbox" value="10">"Презентації дипломних, курсових проектів"</label></div>
+                                <div class="checkbox"><label class="index-text"><input name="exp" type="checkbox" value="11">"Презентації ідей стартапів"</label></div>
+                                <div class="checkbox"><label class="index-text"><input name="exp" type="checkbox" value="0">Iнше:</label></div>
+                                <div class="row"><div class="col-sm-5"><label></label><input name="exp" type="text" value="" class="form-control input-sm"></div></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <p class="subPeople">Where do you study, work etc? *</p>
+                                        <label for="job" class="index-text">Де Ви навчаєтесь чи ким працюєте?</label>
+                                        <input id="job" type="text" value="Я інвалід розумово" class="form-control input-sm">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <p class="subPeople">How did you know about the event? *</p>
+                                        <label for="know" class="index-text">Як ви взнали про подію?</label>
+                                        <input id="know" type="text" value="" class="form-control input-sm">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <p class="subPeople">Do you have your own ideas and wishes for the event?</p>
+                                        <label for="ideas" class="index-text">Чи маєте свої окремі побажання, ідеї щодо проведення заходу?</label>
+                                        <textarea id="ideas" rows="3" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <p class="subPeople">Your e-mail: *</p>
+                                        <label for="email" class="index-text">Ваша електронна пошта:</label>
+                                        <input id="email" type="email" value="" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <p class="subPeople">Your phone number: *</p>
+                                        <label for="phone" class="index-text">Ваш номер телефону:</label>
+                                        <input id="phone" type="text" value="" class="form-control input-sm">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <p class="subPeople">Are you ready to help us with the event?</p>
+                                <p class="index-text">Чи є у вас бажання допомагати в організації заходу, як волонтер?</p>
+                                <div class="radio"><label class="index-text"><input name="help" type="radio" value="1">так</label></div>
+                                <div class="radio"><label class="index-text"><input name="help" type="radio" value="0">ні</label></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <p class="subPeople">What event do you want to visit? *</p>
+                                        <label for="event" class="index-text"> В якому місті Ви хотіли б відвідати захід?</label>
+                                        <select id="event" class="form-control" multiple>
+                                            <option>Бердянськ</option>
+                                            <option>Вінниця</option>
+                                            <option>Дніпропетровськ</option>
+                                            <option>Івано-франківськ</option>
+                                            <option>Київ</option>
+                                            <option>Краматорськ</option>
+                                            <option>Черкаси</option>
+                                            <option>Чернівці</option>
+                                            <option>Чернігів</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row text-center">
+                                <button type="submit" class="regBut text-uppercase">зареєструватись</button>
+                            </div>
                         </form>
-                        <p class="subPeople">Name*</p>
-                        <p class="index-text">Ваше ім'я та прізвище</p>
-                        <form><div class="input-group"><label><input name="name" type="text" value="" class="socialLink"></label></div></form>
-                        <p class="subPeople">Do you wish to take part in special seminar or training for visitors?</p>
-                        <p class="index-text">Чи маєте бажання відвідати тематичні виступи, семінари чи тренінги?</p>
-                        <form class="index-text">
-                            <div class="checkbox"><label><input name="exp" type="checkbox" value="1">"Як пройти співбесіду в ІТ компанію?"</label></div>
-                            <div class="checkbox"><label><input name="exp" type="checkbox" value="2">"English for IT"</label></div>
-                            <div class="checkbox"><label><input name="exp" type="checkbox" value="3">"Online ІТ освіта - можливості та перспективи в Україні"</label></div>
-                            <div class="checkbox"><label><input name="exp" type="checkbox" value="4">"Краш-тест резюме, або 15 кроків до ідеального резюме"</label></div>
-                            <div class="checkbox"><label><input name="exp" type="checkbox" value="5">«Стратегія пошуку роботи»</label></div>
-                            <div class="checkbox"><label><input name="exp" type="checkbox" value="6">"Коворкінги, як перспективний метод організації роботи та навчання програмістів"</label></div>
-                            <div class="checkbox"><label><input name="exp" type="checkbox" value="7">"Таємниці UI дизайну..."</label></div>
-                            <div class="checkbox"><label><input name="exp" type="checkbox" value="8">"Як я став ПРОГРАМІСТОМ?"</label></div>
-                            <div class="checkbox"><label><input name="exp" type="checkbox" value="9">"Як стати програмістом за рік?"</label></div>
-                            <div class="checkbox"><label><input name="exp" type="checkbox" value="10">"Презентації дипломних, курсових проектів"</label></div>
-                            <div class="checkbox"><label><input name="exp" type="checkbox" value="11">"Презентації ідей стартапів"</label></div>
-                            <div class="checkbox"><label><input name="exp" type="checkbox" value="0">Iнше:</label></div>
-                            <div class="input-group"><label><input name="exp" type="text" value="" class="socialLink"></label></div>
-                        </form>
-
-                        <p class="subPeople">Where do you study, work etc? *</p>
-                        <p class="index-text">Де Ви навчаєтесь чи ким працюєте?</p>
-                        <form><div class="input-group"><label><input name="job" type="text" value="Я інвалід розумово" class="socialLink"></label></div></form>
-
-                        <p class="subPeople">How did you know about the event? *</p>
-                        <p class="index-text">Як ви взнали про подію?</p>
-                        <form><div class="input-group"><label><input name="know" type="text" value="" class="socialLink"></label></div></form>
-
-                        <p class="subPeople">Do you have your own ideas and wishes for the event?</p>
-                        <p class="index-text">Чи маєте свої окремі побажання, ідеї щодо проведення заходу?</p>
-                        <form><div class="input-group"><label><input name="ideas" type="text" value="" class="regCompForm"></label></div></form>
-
-                        <p class="subPeople">Your e-mail: *</p>
-                        <p class="index-text">Ваша електронна пошта:</p>
-                        <form><div class="input-group"><label><input name="e-mail" type="email" value="" class="socialLink"></label></div></form>
-
-                        <p class="subPeople">Your phone number: *</p>
-                        <p class="index-text">Ваш номер телефону:</p>
-                        <form><div class="input-group"><label><input name="phone" type="tel" value="" class="socialLink"></label></div></form>
-
-                        <p class="subPeople">Are you ready to help us with the event?</p>
-                        <p class="index-text">Чи є у вас бажання допомагати в організації заходу, як волонтер?</p>
-                        <form>
-                            <div class="radio"><label><input name="help" type="radio" value="1">так</label></div>
-                            <div class="radio"><label><input name="help" type="radio" value="0">ні</label></div>
-                        </form>
-
-                        <p class="subPeople">What event do you want to visit? *</p>
-                        <p class="index-text"> В якому місті Ви хотіли б відвідати захід?</p>
-                        <form class="index-text">
-                            <div class="checkbox"><label><input name="event" type="checkbox" value="1"> Бердянськ</label></div>
-                            <div class="checkbox"><label><input name="event" type="checkbox" value="2"> Вінниця</label></div>
-                            <div class="checkbox"><label><input name="event" type="checkbox" value="3"> Дніпропетровськ</label></div>
-                            <div class="checkbox"><label><input name="event" type="checkbox" value="4"> Івано-франківськ</label></div>
-                            <div class="checkbox"><label><input name="event" type="checkbox" value="5"> Київ</label></div>
-                            <div class="checkbox"><label><input name="event" type="checkbox" value="6"> Краматорськ</label></div>
-                            <div class="checkbox"><label><input name="event" type="checkbox" value="7"> Черкаси</label></div>
-                            <div class="checkbox"><label><input name="event" type="checkbox" value="8"> Чернівці</label></div>
-                            <div class="checkbox"><label><input name="event" type="checkbox" value="9"> Чернігів</label></div>
-                        </form>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12" style="text-align: center">
-                        <button class="regBut text-uppercase" id="reg_btn_person">зареєструватись</button>
                     </div>
                 </div>
             </div>

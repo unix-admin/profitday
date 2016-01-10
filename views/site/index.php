@@ -32,5 +32,34 @@ $this->title = $model->getTitle($type,$status);
         <div class="col-md-1 col-sm-1 col-xs-1 orange-line"></div>
         <hr class="col-md-10" style="margin-top: 2px;">
     </div>
+    <div class="row">
+        <!--<div class="col-md-12">-->
+        <div class="col-md-8 col-md-offset-2">
+            <h3 class="subName">Організатори і учасники</h3>
+            <div class="col-md-1 col-sm-1 col-xs-1 orange-line"></div>
+            <hr class="col-md-10" style="margin-top: 2px;">
+        </div>
+        <!--</div>-->
+    </div>
+    <?=\app\components\LogoWidget::widget()?>
     <!--</div>-->
+
 </div>
+<script>
+    $(document).ready(function(){
+        $("#info").on("hide.bs.collapse", function(){
+            $("#link").html('розгорнути<span class="glyphicon glyphicon-triangle-bottom" style="padding-left: 5px"></span>');
+        });
+        $("#info").on("show.bs.collapse", function(){
+            $("#link").html('згорнути<span class="glyphicon glyphicon-triangle-top" style="padding-left: 5px"></span>');
+        });
+    });
+    $(document).ready(function(){
+        $("#info").on("hide.bs.collapse", function(){
+            $("#link").html('розгорнути<span class="glyphicon glyphicon-triangle-bottom" style="padding-left: 5px"></span>');
+        });
+        $("#info").on("show.bs.collapse", function(){
+            $("#link").html('згорнути<span class="glyphicon glyphicon-triangle-top" style="padding-left: 5px"></span>');
+        });
+    });
+</script>

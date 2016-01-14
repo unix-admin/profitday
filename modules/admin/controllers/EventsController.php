@@ -2,6 +2,7 @@
 
 namespace app\modules\admin\controllers;
 
+use app\models\Photos;
 use Yii;
 use app\models\Events;
 use app\modules\admin\models\EventsSearch;
@@ -50,6 +51,18 @@ class EventsController extends Controller
     {
         return $this->render('view', [
             'model' => $this->findModel($id),
+        ]);
+    }
+
+    public function actionPhoto($id)
+    {
+        $photos = new Photos();
+        $dataProvider = $photos->findAll(['event_id' => $id]);
+
+        return $this->render('photos', [
+            'model' => $this->findModel($id),
+            'photo' => $photos,
+            'dataProvider' => $dataProvider,
         ]);
     }
 

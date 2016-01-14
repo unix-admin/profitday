@@ -33,40 +33,49 @@ AppAsset::register($this);
             //'class' => 'navbar-nav navbar-left',
         ],
      ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-top'],
-        'items' => [
-            Yii::$app->user->isGuest ?
-                ['label' => 'Login', 'url' => ['/admin/default/login']] :
-                [
-                    'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-                    'url' => ['/admin/default/logout'],
-                    'linkOptions' => ['data-method' => 'post']
-                ],
+    if (Yii::$app->user->isGuest)
+    {
+        echo Nav::widget([
+            'options' => ['class' => 'navbar-nav navbar-top'],
+            'items' =>[
+                ['label' => 'Login', 'url' => ['/admin/default/login']]
+            ],
+            ]);
+    }
+    else {
+        echo Nav::widget([
+            'options' => ['class' => 'navbar-nav navbar-top'],
+            'items' => [
+            [
+                'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+                'url' => ['/admin/default/logout'],
+                'linkOptions' => ['data-method' => 'post']
+            ],
+
                 [
                     'label' => 'Керування користувачами',
                     'url' => ['/admin/admins/index'],
                 ],
                 [
-                'label' => 'Керування контентом',
-                'url' => ['/admin/admins/index'],
+                    'label' => 'Керування контентом',
+                    'url' => ['/admin/content/index'],
                 ],
                 [
-                'label' => 'Керування учасниками та компаніями',
-                'url' => ['/admin/company/index'],
+                    'label' => 'Керування учасниками та компаніями',
+                    'url' => ['/admin/company/index'],
                 ],
             [
                 'label' => 'Керування подіями',
-                'url' => ['/admin/admins/index'],
+                'url' => ['/admin/events/index'],
             ],
             [
                 'label' => 'Керування розсилками',
-                'url' => ['/admin/admins/index'],
+                'url' => ['/admin/mail/index'],
             ],
 
-
-        ],
+         ],
     ]);
+    }
     NavBar::end();
     ?>
 

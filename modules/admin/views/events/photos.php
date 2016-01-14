@@ -2,11 +2,11 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-
+use yii\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Events */
 
-$this->title = $model->title_uk;
+$this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Events', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -28,20 +28,25 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            //'id',
-            [
-                'label' => 'City',
-                'value' => \app\models\City::find(['id'=>$model->city_id])->one()->attributes['title_uk'],
-            ],
+            'id',
+            'city_id',
             'event_date',
             'title_uk',
             'title_ru',
             'title_en',
             'address',
-
         ],
-    ]);
-    echo $model->place;
-    ;
-    ?>
+    ]) ?>
+    <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $photo,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            'id',
+
+            ['class' => 'yii\grid\ActionColumn'],
+        ],
+    ]); ?>
+
 </div>

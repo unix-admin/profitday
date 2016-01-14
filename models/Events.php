@@ -14,6 +14,7 @@ use Yii;
  * @property string $title_ru
  * @property string $title_en
  * @property string $address
+ * @property string $place
  */
 class Events extends \yii\db\ActiveRecord
 {
@@ -34,7 +35,7 @@ class Events extends \yii\db\ActiveRecord
             [['city_id', 'title_uk', 'title_ru', 'title_en', 'address'], 'required'],
             [['city_id'], 'integer'],
             [['event_date'], 'safe'],
-            [['title_uk', 'title_ru', 'title_en', 'address'], 'string', 'max' => 255]
+            [['title_uk', 'title_ru', 'title_en', 'address', 'place'], 'string', 'max' => 255]
         ];
     }
 

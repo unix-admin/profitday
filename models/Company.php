@@ -35,6 +35,7 @@ use yii\helpers\ArrayHelper;
 class Company extends \yii\db\ActiveRecord
 {
     public $cities =[];
+    public  $registrationType = '1';
     /**
      * @inheritdoc
      */
@@ -107,8 +108,7 @@ class Company extends \yii\db\ActiveRecord
     public function getCities()
     {
         return $this->hasMany(City::className(), ['id' => 'city_id'])
-            ->viaTable('registration_by_cities', ['registration_id' => 'id']);
-       // return $this->hasMany(RegistrationByCities::className(), ['registration_id' => 'id']);
+            ->viaTable('registration_by_cities', ['registration_id' => 'id','registration_type' => 'registrationType'] );
     }
 
     public function registrations($id)

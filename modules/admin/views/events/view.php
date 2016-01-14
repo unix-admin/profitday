@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use app\components\PhotoWidget;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Events */
@@ -42,6 +43,6 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]);
     echo $model->place;
-    ;
+    echo PhotoWidget::widget(['eventId' => $model->id]);
     ?>
 </div>

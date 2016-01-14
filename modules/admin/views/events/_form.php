@@ -2,10 +2,11 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
+use yii\bootstrap\Modal;
 /* @var $this yii\web\View */
 /* @var $model app\models\Events */
 /* @var $form yii\widgets\ActiveForm */
+
 ?>
 
 <div class="events-form">

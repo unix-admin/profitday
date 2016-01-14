@@ -54,6 +54,11 @@ class EventsController extends Controller
         ]);
     }
 
+    public function actionPhotoedit($id, $event)
+    {
+        return $this->redirect('/admin/photos/update?id='.$id.'&event='.$event,302);
+    }
+
     public function actionPhoto($id)
     {
         $photos = new Photos();

@@ -22,6 +22,8 @@ use Yii;
  */
 class Person extends \yii\db\ActiveRecord
 {
+    public $cities =[];
+    public  $registrationType = '0';
     /**
      * @inheritdoc
      */
@@ -60,6 +62,7 @@ class Person extends \yii\db\ActiveRecord
             'google_profile' => Yii::t('app', 'Google Profile'),
             'linkedin_profile' => Yii::t('app', 'Linkedin Profile'),
             'vk_profile' => Yii::t('app', 'Vk Profile'),
+            'cities' => Yii::t('app', 'cities'),
         ];
     }
 
@@ -70,5 +73,18 @@ class Person extends \yii\db\ActiveRecord
     public static function find()
     {
         return new PersonQuery(get_called_class());
+    }
+
+    public function getCities()
+    {
+        return $this->hasMany(City::className(), ['id' => 'city_id'])
+            ->viaTable('registration_by_cities', ['registration_id' => 'id', 'registration_type' => 'registrationType']);
+    }
+
+    public function registrations($id)
+    {
+        $regid = Person::findone($id);
+        return $regid->getCities();
+
     }
 }

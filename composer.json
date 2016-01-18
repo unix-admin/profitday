@@ -19,7 +19,9 @@
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
         "mihaildev/yii2-ckeditor": "*",
-	"nodge/yii2-eauth": "~2.0"
+	"nodge/yii2-eauth": "~2.0",
+        "mihaildev/yii2-elfinder": "*",
+        "2amigos/yii2-ckeditor-widget": "~1.0"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

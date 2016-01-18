@@ -38,18 +38,9 @@ class RegistrationByCities extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'city_id' => Yii::t('app', 'City ID'),
-            'registration_id' => Yii::t('app', 'Registration ID'),
-            'registration_type' => Yii::t('app', 'Registration Type'),
+            'city_id' => 'City ID',
+            'registration_id' => 'Registration ID',
+            'registration_type' => 'Registration Type',
         ];
-    }
-
-    /**
-     * @inheritdoc
-     * @return RegistrationByCitiesQuery the active query used by this AR class.
-     */
-    public static function find()
-    {
-        return new RegistrationByCitiesQuery(get_called_class());
     }
 }

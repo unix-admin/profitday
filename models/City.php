@@ -49,12 +49,11 @@ class City extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * @inheritdoc
-     * @return CityQuery the active query used by this AR class.
-     */
-    public static function find()
+    public static function getTitle()
     {
-        return new CityQuery(get_called_class());
+
+        $title =  self::findAll();
+        //$titleField = 'title_'.Yii::$app->language;
+        return $title;
     }
 }

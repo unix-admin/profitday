@@ -3,6 +3,8 @@
 namespace app\models;
 
 use Yii;
+use yii\base\Model;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "company".
@@ -32,6 +34,8 @@ use Yii;
  */
 class Company extends \yii\db\ActiveRecord
 {
+    public $cities =[];
+    public  $registrationType = '1';
     /**
      * @inheritdoc
      */
@@ -46,7 +50,11 @@ class Company extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'contact_person', 'order', 'intro_uk', 'intro_ru', 'intro_en', 'facebook_profile', 'google_profile', 'linkedin_profile', 'vk_profile'], 'required'],
+            [['name', 'contact_person', 'order','need_presentation', 'need_training', 'pay_agree','order','telephone', 'e_mail','cities'], 'required'],
+            [['facebook_profile', 'google_profile', 'linkedin_profile', 'vk_profile'], 'url'],
+            [['e_mail'], 'email'],
+            [['e_mail'], 'trim'],
+            [['e_mail'], 'unique'],
             [['need_presentation', 'need_training', 'pay_agree', 'is_organisator', 'is_sponsor', 'order'], 'integer'],
             [['ideas'], 'string'],
             [['name', 'contact_person', 'telephone', 'e_mail', 'site', 'skype', 'logo_url', 'intro_uk', 'intro_ru', 'intro_en', 'facebook_profile', 'google_profile', 'linkedin_profile', 'vk_profile'], 'string', 'max' => 255]
@@ -60,18 +68,18 @@ class Company extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'name' => Yii::t('app', 'Name'),
+            'name' => Yii::t('company', 'Name'),
             'need_presentation' => Yii::t('app', 'Need Presentation'),
             'need_training' => Yii::t('app', 'Need Training'),
             'pay_agree' => Yii::t('app', 'Pay Agree'),
             'ideas' => Yii::t('app', 'Ideas'),
             'contact_person' => Yii::t('app', 'Contact Person'),
-            'telephone' => Yii::t('app', 'Telephone'),
-            'e_mail' => Yii::t('app', 'E Mail'),
+            'telephone' => Yii::t('company', 'Telephone'),
+            'e_mail' => Yii::t('company', 'E Mail'),
             'site' => Yii::t('app', 'Site'),
             'skype' => Yii::t('app', 'Skype'),
-            'is_organisator' => Yii::t('app', 'Is Organisator'),
-            'is_sponsor' => Yii::t('app', 'Is Sponsor'),
+            'is_organisator' => Yii::t('company', 'Is Organisator'),
+            'is_sponsor' => Yii::t('company', 'Is Sponsor'),
             'order' => Yii::t('app', 'Order'),
             'logo_url' => Yii::t('app', 'Logo Url'),
             'intro_uk' => Yii::t('app', 'Intro Uk'),
@@ -81,15 +89,34 @@ class Company extends \yii\db\ActiveRecord
             'google_profile' => Yii::t('app', 'Google Profile'),
             'linkedin_profile' => Yii::t('app', 'Linkedin Profile'),
             'vk_profile' => Yii::t('app', 'Vk Profile'),
+            'cities' => Yii::t('app', 'cities'),
         ];
     }
+    public function afterSave($insert, $changedAttributes){
+        parent::afterSave($insert, $changedAttributes);
+        foreach ($this->cities as $id)
+        {
+            $registration = new RegistrationByCities();
+            $registration->city_id = $id;
+            $registration->registration_id = $this->id;
+            $registration->registration_type=1;
+            $registration->save();
+        }
 
-    /**
-     * @inheritdoc
-     * @return CompanyQuery the active query used by this AR class.
-     */
-    public static function find()
-    {
-        return new CompanyQuery(get_called_class());
     }
+
+    public function getCities()
+    {
+        return $this->hasMany(City::className(), ['id' => 'city_id'])
+            ->viaTable('registration_by_cities', ['registration_id' => 'id','registration_type' => 'registrationType'] );
+    }
+
+    public function registrations($id)
+    {
+      $regid = Company::findone($id);
+        return $regid->getCities();
+
+    }
+
+
 }

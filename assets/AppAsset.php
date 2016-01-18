@@ -15,15 +15,20 @@ use yii\web\AssetBundle;
  */
 class AppAsset extends AssetBundle
 {
+    public $jsOptions = ['position' => \yii\web\View::POS_HEAD];
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
+        'css/jquery.multiselect.css',
     ];
     public $js = [
+        'js/jquery.multiselect.js',
+
     ];
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
+
     ];
 }

@@ -1,91 +1,238 @@
-html,
-body {
-    height: 100%;
+/*.hr {*/
+    /*margin: 0; /!* Обнуляем значение отступов *!/*/
+    /*padding: 4px; /!* Значение полей *!/*/
+/*}*/
+/*.hr li {*/
+    /*display: inline; /!* Отображать как строчный элемент *!/*/
+    /*margin-right: 5px; /!* Отступ слева *!/*/
+    /*padding: 3px; /!* Поля вокруг текста *!/*/
+/*}*/
+/*.map{*/
+    /*position: relative;*/
+    /*width: 620px;*/
+    /*height: 367px;*/
+    /*outline: 0px;*/
+    /*float: left;*/
+/*}*/
+.line {
+    border-left: 4px solid orange; /* Параметры линии */
+    /*margin-left: 2px; /!* Отступ слева *!/*/
+    padding-left: 15px; /* Расстояние от линии до текста */
+    padding-right: 15px;
 }
-
-.wrap {
-    min-height: 100%;
-    height: auto;
-    margin: 0 auto -60px;
-    padding: 0 0 60px;
+.orange-line{
+    border-bottom: 6px solid orange;
 }
-
-.wrap > .container {
-    padding: 70px 15px 20px;
+.blue-line {
+    border-bottom: 6px solid #2270f2;
 }
-
-.footer {
-    height: 60px;
-    background-color: #f5f5f5;
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
+.horizontal-line,
+.horizontal-line-collapse {
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 10px;
 }
-
-.jumbotron {
+.horizontal-line {
+    padding-bottom: 5px;
+}
+.horizontal-line-collapse {
+    padding-bottom: 10px;
+}
+/*.color-text{*/
+    /*color: #f07c00;*/
+/*}*/
+.orange-text{
+    color: #f07c00;
+}
+.red-text {
+    color: #cc3300;
+}
+.blue-text {
+    color: #2270f2;
+}
+/*.color-grey{*/
+    /*color: #555555;*/
+/*}*/
+/*.color-black{*/
+    /*color: black;*/
+/*}*/
+/*.word{*/
+    /*margin-left: 14px;*/
+/*}*/
+/*.map{*/
+    /*width: 500px;*/
+    /*height: 400px;*/
+/*}*/
+.to-be-changed {
+    color: black;
+}
+.to-be-changed:target {
+    color: red;
+}
+.mainName,
+.subName,
+.subCompany,
+.subPeople,
+.index-text,
+.regBut,
+.mainOrgInfo,
+.author,
+.docNavi,
+.lang,
+.modal-text {
+    font-family: 'Myriad Pro';
+    font-weight: 400;
+}
+.mainName, .subName {
+    /*font-family: 'Myriad Pro';*/
+    /*color: #686868;*/
+    font-size: 24px;
+    /*font-weight: 400;*/
+    line-height: 43px;
+    /*text-align: left;*/
+}
+.mainName {
+    color: #686868;
+}
+.subName {
+    color: #555555;
+}
+.subCompany {
+    /*font-family: 'Myriad Pro';*/
+    color: #2270f2;
+    font-size: 16px;
+    /*font-weight: 400;*/
+    line-height: 20px;
+    /*text-align: left;*/
+}
+.subPeople {
+    /*font-family: 'Myriad Pro';*/
+    color: #f07c00;
+    font-size: 16px;
+    /*font-weight: 400;*/
+    line-height: 20px;
+    /*text-align: left;*/
+}
+.index-text {
+    /*font-family: 'Myriad Pro';*/
+    color: #555555;
+    font-size: 13px;
+    /*font-weight: 400;*/
+    line-height: 20px;
+    /*text-align: left;*/
+}
+.regBut, .regButComp {
+    border-radius: 4px;
+    /*background-color: #f07c00;*/
+    box-shadow: 0px 2px 1px 0px rgba(30, 88, 119, 0.5);
+    width: 260px;
+    height: 44px;
+    /*font-family: 'Myriad Pro';*/
+    color: #ffffff;
+    font-size: 20px;
+    /*font-weight: 400;*/
+    line-height: 43px;
     text-align: center;
-    background-color: transparent;
+    text-shadow: 0px 2px 1px rgba(30, 88, 119, 0.5);
+    /*text-transform: uppercase;*/
+    margin-bottom: 15px;
 }
-
-.jumbotron .btn {
-    font-size: 21px;
-    padding: 14px 24px;
+.regBut {
+    background-color: #f07c00;
 }
-
-.not-set {
-    color: #c55;
-    font-style: italic;
+.regBut:hover {
+    background-color: red;
 }
-
-/* add sorting icons to gridview sort links */
-a.asc:after, a.desc:after {
-    position: relative;
-    top: 1px;
-    display: inline-block;
-    font-family: 'Glyphicons Halflings';
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1;
-    padding-left: 5px;
+.regButComp {
+    background-color: #2270f2;
 }
-
-a.asc:after {
-    content: /*"\e113"*/ "\e151";
+.regButComp:hover {
+    background-color: blue;
 }
-
-a.desc:after {
-    content: /*"\e114"*/ "\e152";
+.mainOrg {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cccccc;
+    box-sizing: border-box;
+    /*padding-top: 5%;*/
+    /*padding-bottom: 5%;*/
+    /*padding-left: 10%;*/
+    /*padding-right: 10%;*/
+    /*background-color: #ffffff;*/
+    width: 300px;
+    height: 163px;
+    /*margin-right: 2px;*/
+    margin-left: 10px;
+    margin-top: 2%;
+    text-align: center;
 }
-
-.sort-numerical a.asc:after {
-    content: "\e153";
+.mainOrgInfo {
+    background-color: #ffffff;
+    width: 300px;
+    height: inherit;
+    /*height: 80px;*/
+    /*font-family: 'Myriad Pro';*/
+    color: #666666;
+    font-size: 18px;
+    /*font-weight: 400;*/
+    line-height: 26px;
+    text-align: left;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
-
-.sort-numerical a.desc:after {
-    content: "\e154";
+.socialLink{
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: #b2b2b2;
+    border-style: solid;
+    width: 292px;
+    height: 23px;
 }
-
-.sort-ordinal a.asc:after {
-    content: "\e155";
+.regCompForm{
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: #b2b2b2;
+    border-style: solid;
+    width: 480px;
+    height: 69px;
 }
-
-.sort-ordinal a.desc:after {
-    content: "\e156";
+.author {
+    /*font-family: 'Myriad Pro';*/
+    color: #848484;
+    font-size: 12px;
+    /*font-weight: 400;*/
+    letter-spacing: 0.12px;
+    line-height: 16px;
+    /*text-align: center;*/
 }
-
-.grid-view th {
-    white-space: nowrap;
+.docNavi > li > a {
+    /*font-family: 'Myriad Pro';*/
+    color: #555555 !important;
+    font-size: 12px;
+    /*font-weight: 400;*/
+    text-transform: uppercase;
+    text-decoration: none;
 }
-
-.hint-block {
-    display: block;
-    margin-top: 5px;
-    color: #999;
+.lang, .toReg {
+    font-size: 16px;
+    margin-right: 8px;
+    margin-left: 8px;
 }
-
-.error-summary {
-    color: #a94442;
-    background: #fdf7f7;
-    border-left: 3px solid #eed3d7;
-    padding: 10px 20px;
-    margin: 0 0 15px 0;
+.lang, .text-decor {
+    text-decoration: underline;
+}
+.text-decor {
+    font-weight: 700;
+}
+.modal-text {
+    font-size: 16px;
+    margin-top: 1px;
+    margin-bottom: 2px;
+}
+#link1, #link2 {
+    text-decoration: none;
+}
+#link1:hover, #link2:hover {
+    text-decoration: none;
+    color: orange;
 }

@@ -11,7 +11,8 @@ $this->title = $model->getTitle($type,$status);
 <div class="row">
     <div class="col-md-12" style="text-align: center">
         <!--<div class="col-md-8 col-md-offset-5">-->
-        <button id="regBut" class="regBut text-uppercase">реєструйтесь</button>
+
+        <a role="button" id="regBut" <?php if($type == "index"){ echo 'href="/site/person"';}else{echo 'href="/site/company"';} ?> class="btn regBut text-uppercase">реєструйтесь</a>
         <!--                <button class="btn btn-block" id="regBut">реєструйтесь</button>-->
         <!--</div>-->
     </div>
@@ -28,21 +29,23 @@ $this->title = $model->getTitle($type,$status);
         <a href="#"><img src="<?= Yii::$app->request->baseUrl ?>/image/fsbk.png"></a>
         <a href="#"><img src="<?= Yii::$app->request->baseUrl ?>/image/in.png"></a>
     </div>
-    <div class="col-md-8 col-md-offset-2">
-        <div class="col-md-1 col-sm-1 col-xs-1 orange-line"></div>
-        <hr class="col-md-10" style="margin-top: 2px;">
-    </div>
-    <div class="row">
-        <!--<div class="col-md-12">-->
-        <div class="col-md-8 col-md-offset-2">
-            <h3 class="subName">Організатори і учасники</h3>
-            <div class="col-md-1 col-sm-1 col-xs-1 orange-line"></div>
-            <hr class="col-md-10" style="margin-top: 2px;">
-        </div>
-        <!--</div>-->
-    </div>
-    <?=\app\components\LogoWidget::widget()?>
-    <!--</div>-->
+    <?php if ($type == "index") {
+        echo '<div class="col-md-8 col-md-offset-2" >
+        <div class="col-md-1 col-sm-1 col-xs-1 orange-line" ></div >
+        <hr class="col-md-10" style = "margin-top: 2px;" >
+    </div >
+    <div class="row" >
+        <!--<div class="col-md-12" > -->
+        <div class="col-md-8 col-md-offset-2" >
+            <h3 class="subName" > Організатори і учасники </h3 >
+            <div class="col-md-1 col-sm-1 col-xs-1 orange-line" ></div >
+            <hr class="col-md-10" style = "margin-top: 2px;" >
+        </div >
+        <!--</div > -->
+    </div >';
+    echo \app\components\LogoWidget::widget();
+    }
+    ?>
 
 </div>
 <script>

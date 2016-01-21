@@ -47,14 +47,27 @@ class SiteController extends Controller
     }
 
     public function actionIndex()
+    {
+        $model = new Content();
+        return $this->render('index', [
+            'model' => $model,
+            'status' => '1',
+            'type' => 'index',
+
+        ]);
+    }
+
+        public function actionForcompany()
     {   $model = new Content();
         return $this->render('index',[
             'model' => $model,
             'status' => '1',
-            'type' =>'index',
+            'type' =>'company',
 
         ]);
     }
+
+
 
     public function actionContact()
     {

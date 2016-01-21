@@ -62,9 +62,9 @@ AppAsset::register($this);
         'options' => ['class' => 'nav nav-tabs docNavi'],
         'items' => [
             ['label' => 'Головна', 'url' => ['/site/index']],
-            ['label' => 'Для компаній', 'url' => ['/site/company']],
-            ['label' => 'Найближчі заходи', 'url' => ['/site/index']],
-            ['label' => 'Як це було', 'url' => ['/site/index']],
+            ['label' => 'Для компаній', 'url' => ['/site/forcompany']],
+            ['label' => 'Найближчі заходи', 'url' => ['/site/what']],
+            ['label' => 'Як це було', 'url' => ['/site/yak']],
             ['label' => 'Стати програмістом', 'linkOptions'=>['id' => 'intita','class' => 'navbar-link']],
             ['label' => 'Вакансії для початківців', 'linkOptions'=>['id' => 'vacansion', 'class' => 'navbar-link']
 

@@ -7,7 +7,7 @@ class m160113_183159_alter_events extends Migration
 {
     public function up()
     {
-        $this->addColumn('events','place',$this->string(255));
+        $this->addColumn('events','place',$this->text());
     }
 
     public function down()

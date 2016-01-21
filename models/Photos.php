@@ -7,6 +7,7 @@ use Yii;
 /**
  * This is the model class for table "photos".
  *
+ * @property integer $id
  * @property integer $event_id
  * @property string $photo_path
  */
@@ -26,7 +27,7 @@ class Photos extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['event_id', 'photo_path'], 'required'],
+            [['photo_path'], 'required'],
             [['event_id'], 'integer'],
             [['photo_path'], 'string', 'max' => 255]
         ];
@@ -38,17 +39,9 @@ class Photos extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'event_id' => Yii::t('app', 'Event ID'),
-            'photo_path' => Yii::t('app', 'Photo Path'),
+            'id' => 'ID',
+            'event_id' => 'Event ID',
+            'photo_path' => 'Photo Path',
         ];
-    }
-
-    /**
-     * @inheritdoc
-     * @return PhotosQuery the active query used by this AR class.
-     */
-    public static function find()
-    {
-        return new PhotosQuery(get_called_class());
     }
 }

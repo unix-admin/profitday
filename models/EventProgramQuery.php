@@ -1,13 +1,13 @@
 <?php
 
 namespace app\models;
-
+use \yii\db\ActiveQuery;
 /**
  * This is the ActiveQuery class for [[EventProgram]].
  *
  * @see EventProgram
  */
-class EventProgramQuery extends \yii\db\ActiveQuery
+class EventProgramQuery extends ActiveQuery
 {
     /*public function active()
     {

@@ -10,6 +10,7 @@ use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use app\components\LanguageSwitcherWidget;
 
+
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -28,24 +29,46 @@ AppAsset::register($this);
 
 <?php $this->beginBody() ?>
 
+<header style="margin-top: 2%;">
+    <div class="container">
+        <div class="row">
+            <!--<div class="col-md-12 col-sm-12 col-xs-12">-->
+            <div class="col-md-4">
+                <a class="dropdown-top" href="#"><img src="<?= Yii::$app->request->baseUrl ?>/image/bar.png" alt="img_dropdown"></a>
+            </div>
+            <div class="col-md-4">
+                <img class="col-md-offset-2" src="<?= Yii::$app->request->baseUrl ?>/image/Profitday.png" alt="img_logo">
+            </div>
+            <div class="col-md-4">
+                <span class="col-md-offset-5">| </span>
+                <a class="color-text">ua</a><span> | </span>
+                <a class="color-text">ru</a><span> | </span><a class="color-text">en</a><span> |</span><br><br>
+                <a class="col-md-offset-5 color-text"><img src="<?= Yii::$app->request->baseUrl ?>/image/reg.png" alt="img_reg"> реєстрація</a>
+            </div>
+            <!--</div>-->
+        </div>
+    </div>
+</header>
+
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
-        'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'nav nav-tabs docNavi',
         ],
     ]);
 
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
+        'options' => ['class' => 'nav nav-tabs docNavi'],
         'items' => [
             ['label' => 'Головна', 'url' => ['/site/index']],
-            ['label' => 'Для компаній', 'url' => ['/site/about']],
-            ['label' => 'Найближчі заходи', 'url' => ['/site/contact']],
-            ['label' => 'Як це було', 'url' => ['/site/person']],
-            ['label' => 'Вакансії для початківців', 'url' => ['/site/person']],
+            ['label' => 'Для компаній', 'url' => ['/site/company']],
+            ['label' => 'Найближчі заходи', 'url' => ['/site/index']],
+            ['label' => 'Як це було', 'url' => ['/site/index']],
+            ['label' => 'Стати програмістом', 'linkOptions'=>['id' => 'intita','class' => 'navbar-link']],
+            ['label' => 'Вакансії для початківців', 'linkOptions'=>['id' => 'vacansion', 'class' => 'navbar-link']
+
+            ],
         ],
     ]);
     NavBar::end();
@@ -53,11 +76,8 @@ AppAsset::register($this);
 
     <div class="container">
 
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?php echo LanguageSwitcherWidget::widget(); ?>
         <?= $content ?>
+
     </div>
 </div>
 

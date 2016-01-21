@@ -62,86 +62,75 @@ AppAsset::register($this);
 </div>
 
 <footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-        <div class="row">
-            <div class="col-lg-offset-3 col-lg-7 " id="company-careerDay">
-                <h2>День кар'єри &laquoPROFI DAY&raquo</h2>
-                <hr class="company-hr-normal">
-                <hr class="company-hr-yellow">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-offset-3 col-lg-7 " id="company-mainContent">
-                <p>
-                    організується з метою пошуку працівників компаніями, рекламування навчальних закладів і курсів, які     <br>
-                    готують спеціалістів та для популяризації IT сфери і IT професій (тестувальник, програміст, системній   <br>
-                    адміністратор та інші) серед молоді.                                                                    <br>
-                    Даний захід представляє собою-поєднання дня кар'єри і ярмарки вакансій для спеціалістів, виставку       <br>
-                    навчальних закладів, які готують спеціалістів для ринку праці та презентації компаній (їх напрямки      <br>
-                    діяльності та технології з якими вони працюють, умови роботи, партнери, замовники, корпоративні         <br>
-                    особливості, плани на майбутнє тощо)
-                </p>
-                <h2 class="company-contentH2">В програмі</h2>
-                <p>
-                    передові компанії проводитимуть презентациї, прийматимуть CV від кандидатів, проводитимуть семінари,    <br>
-                    тренінги та майстер-класи.                                                                              <br>
-                    Навчальні заклади також презентуватимуть умови прийому та навчання, перспективи напрямків за якими      <br>
-                    вони готують.
-                </p>
-                <h2 class="company-contentH2">Для вас</h2>
-                <span>презентація своєї компанії та кар'єрних можливостей для молодих спеціалістів;</span>
-                <ul id="company-ul">
-                    <li><span>підбір талановитих та кар'єрних можливостей для молодих свеціалістів;</span></li>
-                    <li><span>налагодження нових бізнес-контаків із потенціальними парнтерами та клієнтами;</span></li>
-                    <li><span>розповсюдження власних рекламних матеріалів;</span></li>
-                    <li><span>реклама компанії в рамках потужної промо-компанії проекту по Україні;</span></li>
-                    <li><span>набір кадрового резерву на сезонні періоди та тимчасові роботи;</span></li>
-                    <li><span>покращення іміджу компанії серед молоді;</span></li>
-                </ul>
-                На <span id="company-PDOrange">&laquoPROFIDAY&raquo</span> запрошені молоді люди, які шукають чи хочуть змінити
-                роботу, студенти та школярі.
-            </div>
-        </div>
-
-        <div class="row">
-            <div class=" col-lg-offset-4 col-lg-7" id="company-motoWord">
-                Участь у проекті надасть можливість створити позитивний імідж соціально-відповідальної <br>
-                компанії яка підтримує молодь, а також внутрішньо переміщених осіб
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-offset-5 col-xs-4">
-                <a href="#" class="btn btn-primary btn-lg" id="company-butReg">    РЕЄСТРУЙТЕСЬ    </a>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-offset-3 col-lg-7" id="company-margin-bottom">
-                <div id="company-shareText">Реєструйтесь через соцмережі: </div>
-                <div class="soc" data-buttoncolor="#999" data-iconcolor="#fff" >
-                    <a href="" class="soc-twitter" title="Twitter" onmouseover="style.background='#f07c00'"
-                       onmouseout="this.style.background='#999'"></a>
-                    <a href="" class="soc-vkontakte" title="VK" onmouseover="this.style.background='#f07c00'"
-                       onmouseout="this.style.background='#999'"></a>
-                    <a href="" class="soc-google" title="G+" onmouseover="this.style.background='#f07c00'"
-                       onmouseout="this.style.background='#999'"></a>
-                    <a href="" class="soc-facebook" title="Facebook" onmouseover="this.style.background='#f07c00'"
-                       onmouseout="this.style.background='#999'"></a>
-                    <a href="" class="soc-linkedin" title="LinkedIn" onmouseover="this.style.background='#f07c00'"
-                       onmouseout="this.style.background='#999'"></a>
-
+    <div id="footer_background">
+        <div class="container">
+            <div id="footer_bg">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <img src="images/footerLogo.png" alt="ProfitDay"/>
+                    </div>
                 </div>
-                <hr class="company-hr-normal">
-                <hr class="company-hr-yellow">
+                <div class="row">
+                    <div class="col-lg-12 hidden-md hidden-sm hidden-xs">
+                        <div id="footer_menu">
+                            <ul class="footer_ul">
+                                <li ><a class="footer_li-li" href="#"><span class="footer_colorLi"> ГОЛОВНА </span></a></li>
+                                <li ><a class="footer_li-li" href="#"><span class="footer_colorLi"> ДЛЯ КОМПАНІЙ </span></a></li>
+                                <li ><a class="footer_li-li" href="#"><span class="footer_colorLi"> НАЙБЛИЖЧІ ЗАХОДИ </span></a></li>
+                                <li ><a class="footer_li-li" href="#"><span class="footer_colorLi"> ЯК ЦЕ БУЛО </span></a></li>
+                                <li ><a class="footer_li-li" href="#"><span class="footer_colorLi"> СТАТИ ПРОГРАМІСТОМ </span></a></li>
+                                <li ><a class="footer_li-li" href="#"><span class="footer_colorLi"> ВАКАНСІЇ ПОЧАТКІВЦІЙ </span></a></li>
+                                <li ><a class="footer_li-li" href="#"><span class="footer_colorLi"> ОРГАНІЗАТОРИ І УЧАСНИКИ </span></a></li>
+                            </ul>
+                            <hr id="footer_hr" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                        <div class="footer_shareText">
+                            поділить в соцмережах:
+                        </div>
+                        <div class="soc" data-buttoncolor="#999" data-iconcolor="#fff">
+                            <a href="" class="soc-twitter" title="Twitter" onmouseover="style.background='#f07c00'"
+                               onmouseout="this.style.background='#999'"></a>
+                            <a href="" class="soc-vkontakte" title="VK" onmouseover="this.style.background='#f07c00'"
+                               onmouseout="this.style.background='#999'"></a>
+                            <a href="" class="soc-google" title="G+" onmouseover="this.style.background='#f07c00'"
+                               onmouseout="this.style.background='#999'"></a>
+                            <a href="" class="soc-facebook" title="Facebook" onmouseover="this.style.background='#f07c00'"
+                               onmouseout="this.style.background='#999'"></a>
+                            <a href="" class="soc-linkedin" title="LinkedIn" onmouseover="this.style.background='#f07c00'"
+                               onmouseout="this.style.background='#999'"></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                        <div class="footer_contactsPD">
+                        <span>
+                            <img src="images/Phone.png" alt="phone">
+                            +38-0432-52-82-67
+                            <img src="images/Mail.png" alt="phone">
+                            robotamolodi@gmail.com
+                            <img src="images/skp.png" alt="phone">
+                            int.it
+                        </span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <p class="pull-right"><?= Yii::powered() ?></p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <span id="footer_copy">2013-2016 &copy; створено Вінницькою ІT-академією</span>
+            </div>
+        </div>
     </div>
 </footer>
-<script type="text/javascript" src="soc.js/soc.min.js"></script><!--JS for footer-->
+<script type="text/javascript" src="js/soc.js/soc.min.js"></script><!--JS for footer-->
 <?php $this->endBody() ?>
 </body>
 </html>

@@ -91,74 +91,123 @@ a.desc:after {
 }
 
 /*Footer CSS start*/
-@charset "ytf-8";
-* {
-    margin:   0;
-    padding:  0;
-    outline:    none;
-}
-html {
-    height: 100%;
-}
-/*Footer*/
 
 footer{
     font-family: 'Myriad Pro';
 }
 
-#footer-bg{
+#footer_bg {
     background: #d5d5d5;
     width: 100%;
     padding: 20px;
     padding-bottom: 40px;
 }
-#footer-background{
+#footer_background{
     background: #d5d5d5;
 }
 
-.footer-ul {
+.footer_ul {
     margin: 0; /* Обнуляем значение отступов */
     padding: 4px; /* Значение полей */
     position:   inherit;
 }
-.footer-ul li {
+.footer_ul li {
     display: inline; /* Отображать как строчный элемент */
     margin-right: 1.4%; /* Отступ слева */
     padding: 3px; /* Поля вокруг текста */
     color:  #555555;
 }
-#footer-hr {
+#footer_hr {
     margin-top: -2px;
 }
-#footer-menu {
+#footer_menu {
     margin-top: 10px;
 }
 
-.footer-colorLi{
+.footer_colorLi{
     color: #555555;
 }
-.li-li:hover{
+.footer_li-li:hover{
     text-decoration: none;
 }
-.footer-colorLi:hover {
+.footer_colorLi:hover {
     color: #f07c00; /* Цвет ссылки при наведении на нее курсора мыши */
     text-decoration: none; /* Добавляем подчеркивание */
     padding-bottom: 4px;
     border-bottom: 2px solid #f07c00;
 }
-.footer-shareText, .soc {
+.footer_shareText, .soc {
     float: left;
 }
 
-.footer-shareText {
+.footer_shareText {
     padding-top: 7px;
 }
 
-.footer-contactsPD {
+.footer_contactsPD {
     float:  right;
     margin-top: 10px;
 }
-#footer-copy{
+#footer_copy{
     margin-left: 2%;
 }
+
 /*Footer CSS end*/
+
+/*about Company CSS start*/
+
+#aboutCompany_body{
+    font-family: 'Myriad Pro';
+}
+
+.aboutCompany_contentH2{
+    text-indent: 35px;
+}
+
+#aboutCompany_ul {
+    list-style: square;
+    padding: 0; /* Убираем поля для браузера Файер фох */
+    margin: 0;
+    margin-left: 16.5px; /* Отступ слева */
+}
+.aboutCompany_li {
+    color: #f07c00;
+}
+.aboutCompany_li span {
+    color:  #333;
+}
+
+#aboutCompany_PDOrange{
+    color: #f07c00;
+}
+
+#aboutCompany_motoWord{
+    margin-top: 20px;
+    border-left: 5px solid #2270f2;
+
+}
+#aboutCompany_butReg{
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+#aboutCompany_shareText {
+    float: left;
+    padding-top: 5px;
+}
+.aboutCompany_hr-normal{
+    margin-top: -0.2em;
+}
+
+#aboutCompany_margin-bottom{
+    margin-bottom: 40px;
+}
+
+.aboutCompany_hr-yellow{
+    margin-top: -2em;
+    margin-left:   0px;
+    width:  80px;
+    background-color: #f07c00;
+    height: 6px;
+}
+
+/*about Company CSS end*/

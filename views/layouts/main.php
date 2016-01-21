@@ -150,7 +150,7 @@ AppAsset::register($this);
         </div>
     </div>
 </footer>
-<script type="text/javascript" src="js/soc.js/soc.min.js"></script><!--JS for footer-->
+<script type="text/javascript" src="/js/soc.js/soc.min.js"></script><!--JS for footer-->
 <?php $this->endBody() ?>
 </body>
 </html>

@@ -22,6 +22,7 @@ AppAsset::register($this);
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <link rel="stylesheet" type="text/css" href="/js/soc.js/soc.min.css">
 </head>
 
 <body>
@@ -81,56 +82,75 @@ AppAsset::register($this);
 </div>
 
 <footer class="footer">
-    <div class="container-fluid" style="background-color: #d5d5d5;">
+    <div id="footer_background">
         <div class="container">
-            <div class="row">
-                <div style="margin-top: 20px; margin-bottom: 20px;"><img src="<?= Yii::$app->request->baseUrl ?>/image/Profitday.png" alt="img_logo"></div>
-            </div>
-            <div class="row">
-                <div class="docNavi">
-                    <ul class="nav nav-tabs">
-                        <li class="active"><a href="#main">ГОЛОВНА</a></li>
-                        <li><a href="#company">ДЛЯ КОМПАНІЙ</a></li>
-                        <li><a href="#events">НАЙБЛИЖЧІ ЗАХОДИ</a></li>
-                        <li><a href="#howWasIt">ЯК ЦЕ БУЛО</a></li>
-                        <li><a href="#toBeProgrammer">СТАТИ ПРОГРАМІСТОМ</a></li>
-                        <li><a href="#vacansy">ВАКАНСІЇ ДЛЯ ПОЧАТКІВЦІВ</a></li>
-                        <li><a href="#members">ОРГАНІЗАТОРИ І УЧАСНИКИ</a></li>
-                    </ul>
+            <div id="footer_bg">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <img src="images/footerLogo.png" alt="ProfitDay"/>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <span class="index-text">Реєструйтесь через соцмережi:</span>
-                    <!--            </div>-->
-                    <!--            <div class="col-md-3">-->
-                    <a href="#"><img src="<?= Yii::$app->request->baseUrl ?>/image/twt.png"></a>
-                    <a href="#"><img src="<?= Yii::$app->request->baseUrl ?>/image/vk.png"></a>
-                    <a href="#"><img src="<?= Yii::$app->request->baseUrl ?>/image/g+.png"></a>
-                    <a href="#"><img src="<?= Yii::$app->request->baseUrl ?>/image/fsbk.png"></a>
-                    <a href="#"><img src="<?= Yii::$app->request->baseUrl ?>/image/in.png"></a>
+                <div class="row">
+                    <div class="col-lg-12 hidden-md hidden-sm hidden-xs">
+                        <div id="footer_menu">
+                            <ul class="footer_ul">
+                                <li ><a class="footer_li-li" href="#"><span class="footer_colorLi"> ГОЛОВНА </span></a></li>
+                                <li ><a class="footer_li-li" href="#"><span class="footer_colorLi"> ДЛЯ КОМПАНІЙ </span></a></li>
+                                <li ><a class="footer_li-li" href="#"><span class="footer_colorLi"> НАЙБЛИЖЧІ ЗАХОДИ </span></a></li>
+                                <li ><a class="footer_li-li" href="#"><span class="footer_colorLi"> ЯК ЦЕ БУЛО </span></a></li>
+                                <li ><a class="footer_li-li" href="#"><span class="footer_colorLi"> СТАТИ ПРОГРАМІСТОМ </span></a></li>
+                                <li ><a class="footer_li-li" href="#"><span class="footer_colorLi"> ВАКАНСІЇ ПОЧАТКІВЦІЙ </span></a></li>
+                                <li ><a class="footer_li-li" href="#"><span class="footer_colorLi"> ОРГАНІЗАТОРИ І УЧАСНИКИ </span></a></li>
+                            </ul>
+                            <hr id="footer_hr" />
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-5" style="color: #414141; text-align: end;">
-                    <img src="<?= Yii::$app->request->baseUrl ?>/image/Phone.png" alt="img_phone">+38-0432-52-82-67 <img src="<?= Yii::$app->request->baseUrl ?>/image/Mail.png" alt="img_mail"> robotamolodi@gmail.com <img src="<?=Yii::$app->request->baseUrl ?>/image/Skype.png" alt="img_skype"> int.it
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                        <div class="footer_shareText">
+                            поділить в соцмережах:
+                        </div>
+                        <div class="soc" data-buttoncolor="#999" data-iconcolor="#fff">
+                            <a href="" class="soc-twitter" title="Twitter" onmouseover="style.background='#f07c00'"
+                               onmouseout="this.style.background='#999'"></a>
+                            <a href="" class="soc-vkontakte" title="VK" onmouseover="this.style.background='#f07c00'"
+                               onmouseout="this.style.background='#999'"></a>
+                            <a href="" class="soc-google" title="G+" onmouseover="this.style.background='#f07c00'"
+                               onmouseout="this.style.background='#999'"></a>
+                            <a href="" class="soc-facebook" title="Facebook" onmouseover="this.style.background='#f07c00'"
+                               onmouseout="this.style.background='#999'"></a>
+                            <a href="" class="soc-linkedin" title="LinkedIn" onmouseover="this.style.background='#f07c00'"
+                               onmouseout="this.style.background='#999'"></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                        <div class="footer_contactsPD">
+                        <span>
+                            <img src="images/Phone.png" alt="phone">
+                            +38-0432-52-82-67
+                            <img src="images/Mail.png" alt="phone">
+                            robotamolodi@gmail.com
+                            <img src="images/skp.png" alt="phone">
+                            int.it
+                        </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="author">2013-2016 ©  Створено Вінницькою IT-Академією</div>
-</footer>
-<script>
-    $(document).ready(function(){
-        $("#vacansion").click(function(){
-            window.open("http://www.robotamolodi.org/ua_uk/vacancies?sphere=2");
-        });
-    });
-    $(document).ready(function(){
-        $("#intita").click(function(){
-            window.open("http://www.intita.com");
-        });
-    });
-</script>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <span id="footer_copy">2013-2016 &copy; створено Вінницькою ІT-академією</span>
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="/js/soc.js/soc.min.js"></script><!--JS for footer-->
 <?php $this->endBody() ?>
 </body>
 </html>

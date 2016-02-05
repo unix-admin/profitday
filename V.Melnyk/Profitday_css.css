@@ -1,0 +1,74 @@
+.hr {
+    margin: 0; /* Обнуляем значение отступов */
+    padding: 4px; /* Значение полей */
+}
+.hr li {
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 5px; /* Отступ слева */
+    padding: 3px; /* Поля вокруг текста */
+}
+.map{
+    position: relative;
+    width: 620px;
+    height: 367px;
+    outline: 0px;
+    float: left;
+}
+.line {
+    border-left: 2px solid orange; /* Параметры линии */
+
+    padding-left: 10px; /* Расстояние от линии до текста */
+}
+.orange-line{
+    color: orange;
+    border-bottom: 4px solid orange;
+}
+.color-text{
+    color: orange;
+}
+.color-grey{
+    color: gray;
+}
+.color-black{
+    color: black;
+
+}
+.word{
+    margin-left: 14px;
+}
+.map{
+    width: 500px;
+    height: 400px;
+}
+
+a{
+    outline:none !important;
+    text-decoration: none !important;
+
+
+}
+iframe{
+    width: 525px;
+    height: 400px;
+    frameborder: 0;
+    border: 0;
+}
+a:focus {
+    color: green;
+    background: orange;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

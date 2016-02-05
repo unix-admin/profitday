@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carousel</title>
+    <!-- власні css -->
+    <link type="text/css" rel="stylesheet" href="css/index.css">
+    <!-- підключаємо bootstrap  -->
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- Підключаємо файли слайдера -->
+    <script type="text/javascript" src="jquery/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="js/jcarousel.responsive.css">
+    <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tinycarousel.js"></script>
+    <!-- js власний файл, положення файла в списку грає роль, він повинен бути тут -->
+    <script type="text/javascript" src="js/index.js"></script>
+    <!--Файли слайдера -->
+    <link type="text/css" rel="stylesheet" href="css/jquery.fancybox.css" media="screen">
+    <script type="text/javascript" src="js/jquery.fancybox.js"></script>
+</head>
+<body>
+<div class="how_container">
+    <!-- Блок із лініями -->
+    <div id="how_line-common" class="line-common-next">
+        <p class="how_label">Як це було</p>
+        <hr class="how_gray-line">
+        <hr class="how_orange-line">
+    </div><!-- how_line-common  -->
+    <!-- Блок слайдер з роками -->
+    <div id="how_slider_year">
+        <a class="buttons how_left_year" href="#"><span class="glyphicon glyphicon-menu-left"></span></a>
+            <div class="viewport">
+                <div class="how_jcarousel">
+                    <ul>
+                        <li><a href="#" class="how_year-list-a">2013 року</a></li>
+                        <li><a href="#" class="how_year-list-a">2014 року</a></li>
+                        <li><a href="#" class="how_year-list-a">2015 року</a></li>
+                        <li><a href="#" class="how_year-list-a">2016 року</a></li>
+                        <li><a href="#" class="how_year-list-a">2017 року</a></li>
+                        <li><a href="#" class="how_year-list-a">2018 року</a></li>
+                    </ul>
+                </div> <!-- how_jcarousel -->
+            </div><!-- viewport slider year-->
+        <a class="buttons how_right_year" href="#"><span class="glyphicon glyphicon-menu-right"></span></a>
+            </div><!--how_slider_year-->
+                <div id="how_year-line">
+                    <hr>
+                </div> <!-- how_year-line -->
+   <!-- Блок слайдер з містами -->
+    <div id="how_slider_city">
+        <a class="buttons how_left_city" href="#"><span class="glyphicon glyphicon-menu-left"></span></a>
+            <div class="viewport">
+                <div class="how_jcarousel">
+                    <ul>
+                        <li><a href="#" id="how_Vinnytsia" class="how_city-list-a">Вінниця</a></li>
+                        <li><a href="#" id="how_Dnipro" class="how_city-list-a">Дніпропетровськ</a></li>
+                        <li><a href="#" id="how_Zytomyr" class="how_city-list-a">Житомир</a></li>
+                        <li><a href="#" id="how_Zaporizzia" class="how_city-list-a">Запоріжжя</a></li>
+                        <li><a href="#" id="how_Frankivsk" class="how_city-list-a">Івано-Франківськ</a></li>
+                        <li><a href="#" id="how_Kyiv" class="how_city-list-a">Київ</a></li>
+                        <li><a href="#" id="how_Kramatorsk" class="how_city-list-a">Краматорськ</a></li>
+                        <li><a href="#" id="how_Lviv" class="how_city-list-a">Львів</a></li>
+                        <li><a href="#" id="how_Lutsk" class="how_city-list-a">Луцьк</a></li>
+                        <li><a href="#" id="how_Poltava" class="how_city-list-a">Полтава</a></li>
+                        <li><a href="#" id="how_Ternopil" class="how_city-list-a">Тернопіль</a></li>
+                        <li><a href="#" id="how_Kharkiv" class="how_city-list-a">Харків</a></li>
+                        <li><a href="#" id="how_Herson" class="how_city-list-a">Херсон</a></li>
+                        <li><a href="#" id="how_Cherkasy" class="how_city-list-a">Черкаси</a></li>
+                        <li><a href="#" id="how_Chernivci" class="how_city-list-a">Чернівці</a></li>
+                        <li><a href="#" id="how_Chernigiv" class="how_city-list-a">Чернігів</a></li>
+                    </ul>
+                </div> <!-- how_jcarousel -->
+            </div><!-- viewport slider city-->
+        <a class="buttons how_right_city" href="#"><span class="glyphicon glyphicon-menu-right"></span></a>
+    </div><!--how_slider_city-->
+    <div id="how_city_line">
+        <hr>
+    </div> <!-- how_city-line -->
+<!-- Блок слайдер з фото -->
+    <div id="how_slider_foto">
+            <a class="buttons prev" href="#"><span class="glyphicon glyphicon-menu-left"></span></a>
+                <div class="viewport">
+                    <ul class="overview">
+                        <li><p class="bottom_line"></p>
+                            <a class="fancybox" href="images/1.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp">
+                            <img class="how_img_foto" src="images/1.jpg" alt="images" /></a><p class="plus"></p>
+                        </li>
+                       <li><p class="bottom_line"></p>
+                           <a class="fancybox" href="images/2.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon">
+                           <img class="how_img_foto" src="images/2.jpg" alt="images" /></a><p class="plus"></p>
+                       </li>
+                        <li><p class="bottom_line"></p>
+                            <a class="fancybox" href="images/3.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno">
+                            <img class="how_img_foto" src="images/3.jpg" alt="images" /></a><p class="plus"></p>
+                        </li>
+                        <li><p class="bottom_line"></p>
+                            <a class="fancybox" href="images/4.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno">
+                            <img class="how_img_foto" src="images/4.jpg" alt="images"></a><p class="plus"></p>
+                        </li>
+                        <li><p class="bottom_line"></p>
+                            <a class="fancybox" href="images/5.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno">
+                            <img class="how_img_foto" src="images/5.jpg" alt="images"></a><p class="plus"></p>
+                        </li>
+                        <li><p class="bottom_line"></p>
+                            <a class="fancybox" href="images/6.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno">
+                            <img class="how_img_foto" src="images/6.jpg" alt="images"></a><p class="plus"></p>
+                        </li>
+                        <li><p class="bottom_line"></p>
+                            <a class="fancybox" href="images/7.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno">
+                            <img class="how_img_foto" src="images/7.jpg" alt="images"></a><p class="plus"></p>
+                        </li>
+                    </ul>
+                </div>
+            <a class="buttons next" href="#"><span class="glyphicon glyphicon-menu-right"></span></a>
+        <div id="under-aside-line"> <!-- Блок із текстом під слайдером №3 -->
+            <p class="under_line">31 жовтня 1812 року <br> м.Вінниця, вул. Архітектора Артинова,12а <br>
+            галерея "Інтершик" <br> Програма "Якась дуже довга та не зрозуміла".</p>
+        </div> <!-- under-aside-line -->
+    </div><!--how_slider_foto-->
+</div><!--how_container-->
+</body>
+</html>

@@ -1,0 +1,702 @@
+/* Блок з лініями */
+#how_line-common{                                       /* Головний блок з лініями */
+    margin: 5% auto;
+    width: 54%;
+}
+p.how_label{                                           /* властивості напису */
+    font-family: 'Myriad Pro';
+    color:  #555555;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1.792;
+}
+hr.how_gray-line{                                       /* властивості сірої лінії */
+    background-color: #d7d7d7;
+    height: 1px;
+    border: none;
+}
+.how_orange-line{                                      /* властивості оранжевої лінії */
+    width: 8%;                                        /* задаємо ширину конкретної лінії в блоці  */
+    background-color:  #f26522;
+    height: 6px;
+    border: none;
+    margin:-27px 0 0 0;                                /* позиціонуємо оранжеву лінію  */
+}
+/*Блок слайдер з роками*/
+#how_slider_year {                                    /* Головний блок слайдера із роками */
+    margin: -70px auto;
+    overflow: hidden;
+    position: relative;
+    padding: 0 60px 10px;
+    width:54%;
+}
+#how_slider_year .viewport {
+    height: 125px;
+    overflow: hidden;
+    position: relative;
+}
+#how_slider_year .buttons {                             /* кнопки переключення загальні налаштування */
+    background:rgb(213, 213, 213);
+    display: block;
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 29px;
+    height: 29px;
+    color: rgb(102, 102, 102);
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    font-size: 15px;
+}
+#how_slider_year .how_right_year {                          /* кнопки переключення загальні права */
+    right: 0;
+    left: auto;
+    top: 50%;
+}
+#how_slider_year .buttons:hover {                        /* кнопки переключення налаштування при наведенні */
+    color: #fff;
+    background: rgb(240, 124, 0);
+}
+#how_slider_year .disable {
+    color: #0f0f0f;
+}
+#how_slider_year li {
+    list-style: none;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: 240px;
+    left: 0;
+    top: 0;
+}
+#how_slider_year li {                                    /* управління списком */
+    float: left;
+    margin: 70px 0 0 0;
+    padding: 0 0 0 30px;
+    height: 38px;
+    list-style-type: none;
+}
+#how_year-line{                                         /* регулюємо висоту лінії під роками */
+    margin: 32px auto;
+    background-color:  #d7d7d7;
+    width: 54%;
+    height: 1px;
+}
+#how_slider_year  a {                                    /* задаємо властивості шрифтам */
+    text-decoration: none;
+    font-family: 'Myriad Pro';
+    color:  #999999;
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: 1.444;
+}
+#how_slider_year li .how_year-list-a:hover{                            /* змінюємо колір при наведенні */
+    color: rgb(204, 51, 0);
+    position: relative;
+}
+#how_slider_year li .how_year-list-a:active{                      /* змінюємо колір при наведенні */
+    color: #555555;
+    background-color: #f5f5f5;
+    border-bottom: 6px solid #f07c00;
+    position: relative;
+    padding:8px 15px 2px 15px;
+}
+.how_year-list-a:active::after{                                 /* додаємо трикутник позиціонуємо absolute */
+    content: '';
+    height: 0;
+    width: 0;
+    display:block;
+    border: 10px solid transparent;
+    border-top: 10px solid #f07c00;
+    margin-top: 3px;
+    margin-left: 40px;
+    position: absolute;
+}
+.how_left_year.inactive,                                       /*задаємо стиль для кінця списку*/
+.how_right_year.inactive {
+    opacity: .5;
+    cursor: default;
+}
+/*Блок слайдер з містами*/
+#how_slider_city {                                            /* Головний блок слайдера із роками */
+    margin: -40px auto;
+    overflow: hidden;
+    position: relative;
+    padding: 0 50px 10px;
+    width:54%;
+}
+#how_slider_city .viewport {
+    height: 125px;
+    overflow: hidden;
+    position: relative;
+}
+#how_slider_city .buttons {                              /* кнопки переключення загальні налаштування */
+    background:rgb(213, 213, 213);
+    display: block;
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 29px;
+    height: 29px;
+    color: rgb(102, 102, 102);
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    font-size: 15px;
+}
+#how_slider_city .how_right_city {                          /* кнопки переключення загальні права */
+    right: 0;
+    left: auto;
+    top: 50%;
+}
+#how_slider_city .buttons:hover {                        /* кнопки переключення налаштування при наведенні */
+    color: #fff;
+    background: rgb(240, 124, 0);
+}
+#how_slider_city .disable {
+    color: #0f0f0f;
+}
+#how_slider_city li {
+    list-style: none;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top: 0;
+}
+#how_slider_city li {                                    /* управління списком */
+    float: left;
+    margin: 70px 0 0 0;
+    padding: 0 0 0 30px;
+    height: 38px;
+    list-style-type: none;
+
+}
+#how_city_line{                                         /* регулюємо висоту лінії під роками */
+    margin:-58px auto;
+    background-color:  #d7d7d7;
+    width: 54%;
+    height: 1px;
+}
+#how_slider_city a {                                    /* задаємо властивості шрифтам */
+    text-decoration: none;
+    font-family: 'Myriad Pro';
+    color:  #999999;
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: 1.444;
+}
+#how_slider_city li .how_city-list-a:hover{               /* змінюємо колір при наведенні */
+    color: rgb(204, 51, 0);
+    position: relative;
+}
+#how_slider_city li .how_city-list-a:active{               /* змінюємо колір при наведенні */
+    color: #555555;
+    background-color: #f5f5f5;
+    border-bottom: 6px solid #f07c00;
+    position: relative;
+    padding:8px 15px 2px 15px;
+}
+.how_city-list-a:active::after{                            /* додаємо трикутник позиціонуємо absolute */
+    content: '';
+    height: 0;
+    width: 0;
+    display:block;
+    border: 10px solid transparent;
+    border-top: 10px solid #f07c00;
+    margin-top: 3px;
+    margin-left: 40px;
+    position: absolute;
+}
+.how_left_city.inactive,                                      /*задаємо стиль для кінця списку*/
+.how_right_city.inactive {
+    opacity: .5;
+    cursor: default;
+}
+#how_Vinnytsia{
+    margin: 0 0 0 10px;
+}
+#how_slider_city li #how_Vinnytsia:active{                    /* змінюємо колір при наведенні */
+    color: #555555;
+    background-color: #f5f5f5;
+    border-bottom: 6px solid #f07c00;
+    position: relative;
+    padding:8px 15px 2px 15px;
+}
+#how_Vinnytsia:active::after{                                 /* додаємо трикутник позиціонуємо absolute */
+    content: '';
+    height: 0;
+    width: 0;
+    display:block;
+    border: 10px solid transparent;
+    border-top: 10px solid #f07c00;
+    margin-top: 3px;
+    margin-left: 45px;
+    position: absolute;
+}
+#how_Dnipro{
+margin: 0 0 0 -10px;
+}
+#how_slider_city li #how_Dnipro:active{                        /* змінюємо колір при наведенні */
+    color: #555555;
+    background-color: #f5f5f5;
+    border-bottom: 6px solid #f07c00;
+    position: relative;
+    padding:8px 10px 2px 10px;
+}
+#how_Dnipro:active::after{                                   /* додаємо трикутник позиціонуємо absolute */
+    content: '';
+    height: 0;
+    width: 0;
+    display:block;
+    border: 10px solid transparent;
+    border-top: 10px solid #f07c00;
+    margin-top: 3px;
+    margin-left: 44px;
+    position: absolute;
+}
+#how_Zytomyr{
+    margin: 0 0 0 25px;
+}
+#how_slider_city li #how_Zytomyr:active{                            /* змінюємо колір при наведенні */
+    color: #555555;
+    background-color: #f5f5f5;
+    border-bottom: 6px solid #f07c00;
+    position: relative;
+    padding:8px 15px 2px 15px;
+}
+#how_Zytomyr:active::after{                                   /* додаємо трикутник позиціонуємо absolute */
+    content: '';
+    height: 0;
+    width: 0;
+    display:block;
+    border: 10px solid transparent;
+    border-top: 10px solid #f07c00;
+    margin-top: 3px;
+    margin-left: 60px;
+    position: absolute;
+}
+#how_Zaporizzia{
+    margin: 0 0 0 5px;
+}
+#how_slider_city li #how_Zaporizzia:active{                            /* змінюємо колір при наведенні */
+    color: #555555;
+    background-color: #f5f5f5;
+    border-bottom: 6px solid #f07c00;
+    position: relative;
+    padding:8px 15px 2px 15px;
+}
+#how_Zaporizzia:active::after{                                   /* додаємо трикутник позиціонуємо absolute */
+    content: '';
+    height: 0;
+    width: 0;
+    display:block;
+    border: 10px solid transparent;
+    border-top: 10px solid #f07c00;
+    margin-top: 3px;
+    margin-left: 45px;
+    position: absolute;
+}
+#how_Frankivsk{
+    margin: 0 0 0 -5px;
+}
+#how_slider_city li #how_Frankivsk:active{                            /* змінюємо колір при наведенні */
+    color: #555555;
+    background-color: #f5f5f5;
+    border-bottom: 6px solid #f07c00;
+    position: relative;
+    padding:8px 5px 2px 5px;
+}
+#how_Frankivsk:active::after{                                   /* додаємо трикутник позиціонуємо absolute */
+    content: '';
+    height: 0;
+    width: 0;
+    display:block;
+    border: 10px solid transparent;
+    border-top: 10px solid #f07c00;
+    margin-top: 3px;
+    margin-left: 50px;
+    position: absolute;
+}
+#how_Kyiv{
+    margin: 0 0 0 35px;
+}
+#how_slider_city li #how_Kyiv:active{                            /* змінюємо колір при наведенні */
+    color: #555555;
+    background-color: #f5f5f5;
+    border-bottom: 6px solid #f07c00;
+    position: relative;
+    padding:8px 15px 2px 15px;
+}
+#how_Kyiv:active::after{                                   /* додаємо трикутник позиціонуємо absolute */
+    content: '';
+    height: 0;
+    width: 0;
+    display:block;
+    border: 10px solid transparent;
+    border-top: 10px solid #f07c00;
+    margin-top: 3px;
+    margin-left: 55px;
+    position: absolute;
+}
+#how_Kramatorsk{
+    margin: 0 0 0 0;
+}
+#how_slider_city li #how_Kramatorsk:active{                    /* змінюємо колір при наведенні */
+    color: #555555;
+    background-color: #f5f5f5;
+    border-bottom: 6px solid #f07c00;
+    position: relative;
+    padding:8px 15px 2px 15px;
+}
+#how_Kramatorsk:active::after{                               /* додаємо трикутник позиціонуємо absolute */
+    content: '';
+    height: 0;
+    width: 0;
+    display:block;
+    border: 10px solid transparent;
+    border-top: 10px solid #f07c00;
+    margin-top: 3px;
+    margin-left: 50px;
+    position: absolute;
+}
+#how_Lviv{
+    margin: 0 0 0 30px;
+}
+#how_slider_city li #how_Lviv:active{                       /* змінюємо колір при наведенні */
+    color: #555555;
+    background-color: #f5f5f5;
+    border-bottom: 6px solid #f07c00;
+    position: relative;
+    padding:8px 15px 2px 15px;
+}
+#how_Lviv:active::after{                                   /* додаємо трикутник позиціонуємо absolute */
+    content: '';
+    height: 0;
+    width: 0;
+    display:block;
+    border: 10px solid transparent;
+    border-top: 10px solid #f07c00;
+    margin-top: 3px;
+    margin-left: 55px;
+    position: absolute;
+}
+#how_Lutsk{
+    margin: 0 0 0 20px;
+}
+#how_slider_city li #how_Lutsk:active{                       /* змінюємо колір при наведенні */
+    color: #555555;
+    background-color: #f5f5f5;
+    border-bottom: 6px solid #f07c00;
+    position: relative;
+    padding:8px 15px 2px 15px;
+}
+#how_Lutsk:active::after{                                   /* додаємо трикутник позиціонуємо absolute */
+    content: '';
+    height: 0;
+    width: 0;
+    display:block;
+    border: 10px solid transparent;
+    border-top: 10px solid #f07c00;
+    margin-top: 3px;
+    margin-left: 45px;
+    position: absolute;
+}
+#how_Poltava{
+    margin: 0 0 0 20px;
+}
+#how_slider_city li #how_Poltava:active{                    /* змінюємо колір при наведенні */
+    color: #555555;
+    background-color: #f5f5f5;
+    border-bottom: 6px solid #f07c00;
+    position: relative;
+    padding:8px 15px 2px 15px;
+}
+#how_Poltava:active::after{                                /* додаємо трикутник позиціонуємо absolute */
+    content: '';
+    height: 0;
+    width: 0;
+    display:block;
+    border: 10px solid transparent;
+    border-top: 10px solid #f07c00;
+    margin-top: 3px;
+    margin-left: 55px;
+    position: absolute;
+}
+#how_Ternopil{
+    margin: 0 0 0 20px;
+}
+#how_slider_city li #how_Ternopil:active{                     /* змінюємо колір при наведенні */
+    color: #555555;
+    background-color: #f5f5f5;
+    border-bottom: 6px solid #f07c00;
+    position: relative;
+    padding:8px 15px 2px 15px;
+}
+#how_Ternopil:active::after{                                 /* додаємо трикутник позиціонуємо absolute */
+    content: '';
+    height: 0;
+    width: 0;
+    display:block;
+    border: 10px solid transparent;
+    border-top: 10px solid #f07c00;
+    margin-top: 3px;
+    margin-left: 60px;
+    position: absolute;
+}
+#how_Kharkiv{
+    margin: 0 0 0 20px;
+}
+#how_slider_city li #how_Kharkiv:active{                       /* змінюємо колір при наведенні */
+    color: #555555;
+    background-color: #f5f5f5;
+    border-bottom: 6px solid #f07c00;
+    position: relative;
+    padding:8px 15px 2px 15px;
+}
+#how_Kharkiv:active::after{                                   /* додаємо трикутник позиціонуємо absolute */
+    content: '';
+    height: 0;
+    width: 0;
+    display:block;
+    border: 10px solid transparent;
+    border-top: 10px solid #f07c00;
+    margin-top: 3px;
+    margin-left: 50px;
+    position: absolute;
+}
+#how_Herson{
+    margin: 0 0 0 20px;
+}
+#how_slider_city li #how_Herson:active{                       /* змінюємо колір при наведенні */
+    color: #555555;
+    background-color: #f5f5f5;
+    border-bottom: 6px solid #f07c00;
+    position: relative;
+    padding:8px 15px 2px 15px;
+}
+#how_Herson:active::after{                                   /* додаємо трикутник позиціонуємо absolute */
+    content: '';
+    height: 0;
+    width: 0;
+    display:block;
+    border: 10px solid transparent;
+    border-top: 10px solid #f07c00;
+    margin-top: 3px;
+    margin-left: 50px;
+    position: absolute;
+}
+#how_Cherkasy{
+    margin: 0 0 0 20px;
+
+}
+#how_slider_city li #how_Cherkasy:active{                       /* змінюємо колір при наведенні */
+    color: #555555;
+    background-color: #f5f5f5;
+    border-bottom: 6px solid #f07c00;
+    position: relative;
+    padding:8px 15px 2px 15px;
+}
+#how_Cherkasy:active::after {                                 /* додаємо трикутник позиціонуємо absolute */
+    content: '';
+    height: 0;
+    width: 0;
+    display: block;
+    border: 10px solid transparent;
+    border-top: 10px solid #f07c00;
+    margin-top: 3px;
+    margin-left: 55px;
+    position: absolute;
+}
+#how_Chernivci{
+    margin: 0 0 0 20px;
+}
+#how_slider_city li #how_Chernivci:active{                     /* змінюємо колір при наведенні */
+    color: #555555;
+    background-color: #f5f5f5;
+    border-bottom: 6px solid #f07c00;
+    position: relative;
+    padding:8px 15px 2px 15px;
+}
+#how_Chernivci:active::after{                                   /* додаємо трикутник позиціонуємо absolute */
+    content: '';
+    height: 0;
+    width: 0;
+    display:block;
+    border: 10px solid transparent;
+    border-top: 10px solid #f07c00;
+    margin-top: 3px;
+    margin-left: 55px;
+    position: absolute;
+}
+
+#how_Chernigiv{
+    margin: 0 0 0 20px;
+}
+#how_slider_city li #how_Chernigiv:active{                      /* змінюємо колір при наведенні */
+    color: #555555;
+    background-color: #f5f5f5;
+    border-bottom: 6px solid #f07c00;
+    position: relative;
+    padding:8px 15px 2px 15px;
+}
+#how_Chernigiv:active::after{                                   /* додаємо трикутник позиціонуємо absolute */
+    content: '';
+    height: 0;
+    width: 0;
+    display:block;
+    border: 10px solid transparent;
+    border-top: 10px solid #f07c00;
+    margin-top: 3px;
+    margin-left: 50px;
+    position: absolute;
+}
+/* Блок слайдер з фото */
+#how_slider_foto {                                                       /*Головний клас*/
+    height: 1%;
+    margin: 90px auto;
+    overflow: hidden;
+    position: relative;
+    padding: 0 50px 0 60px;
+    width:54%;
+}
+
+#how_slider_foto .viewport{
+    height: 125px;
+    overflow: hidden;
+    position: relative;
+}
+#how_slider_foto .buttons {                                           /*Кноаки загальні стилі*/
+    background:rgb(213, 213, 213);
+    display: block;
+    border-radius: 2px;
+    position: absolute;
+    top: 18%;
+    left: 0;
+    width: 29px;
+    height: 29px;
+    color: rgb(102, 102, 102);
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    font-size: 15px;
+}
+#how_slider_foto .next{
+    right: 0;
+    left: auto;
+    top: 18%;
+}
+#how_slider_foto .buttons:hover {
+    color: #fff;
+    background: rgb(240, 124, 0);
+}
+#how_slider_foto .overview {
+    list-style: none;
+    position: absolute;                                             /*Позиціонування впливає на рух каруселі*/
+    padding: 0;
+    margin: 0;
+    width: 240px;
+    left: 0;
+    top: 0;
+}
+#how_slider_foto .overview li {
+    float: left;
+    margin: 0 20px 0 0;
+    padding: 3px;
+    height: 121px;
+    width: 140px;
+    position: relative;
+    list-style-type: none;
+}
+#how_slider_foto li .how_img_foto{
+    width: 140px;
+    height: 121px;
+
+}
+#how_slider_foto .how_img_foto:hover{                            /* змінюємо колір при наведенні */
+    opacity: 0.5;
+
+}
+/*Додаємо плюс при наведенні*/
+.plus{
+    background: rgb(242, 101, 34);                         /*задаємо горизонталь, увагу на позиціонування в main div*/
+    height: 3px;
+    position: absolute;
+    width: 26px;
+    top:50px;
+    left: 50px;
+    visibility: hidden;
+}
+.plus:after{
+    background: rgb(242, 101, 34);                            /*задаємо вертикаль, увагу на позиціонування*/
+    content: "";
+    height: 26px;
+    left: 11px;
+    position: absolute;
+    top: -11px;
+    width: 3px;
+}
+.overview li:hover .plus{                                   /*при наведенні*/
+    color: orange;
+    left: 57px;
+    top: 55px;
+    z-index: 2;
+    visibility: visible;
+}
+/*Line under foto*/
+.bottom_line{
+    background: rgb(242, 101, 34);
+    height: 6px;
+    position: absolute;
+    width: 140px;
+    top:117px;
+    visibility: hidden;
+}
+.overview li:hover .bottom_line{                           /*при наведенні*/
+    background: rgb(242, 101, 34);
+    top:118px;
+    z-index: 2;
+    visibility: visible;
+}
+#under-aside-line p{                                     /* Блок із текстом під слайдером №3*/
+    font-family: 'Myriad Pro';
+    color:  #666666;
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: 1.444;
+    float: left;
+    margin: 40px 0 0 4px;
+}
+.under_line{
+    border-left: 3px solid;
+    border-color: #f07c00;
+    padding-left: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
